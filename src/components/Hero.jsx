@@ -3,9 +3,9 @@ import { Marquee } from "./magicui/marquee";
 
 function Hero() {
   return (
-    <div className=" w-full bg-black" >
+    <div className=" w-full h-full bg-black" >
       {/* Top Left (Up) */}
-      <div className="absolute top-0 left-0 p-4">
+      <div className="absolute top-6 left-4 p-4">
         <Marquee pauseOnHover={true}>
           <img
             src="/posters/sholay.png"
@@ -26,7 +26,7 @@ function Hero() {
       </div>
 
       {/* Top Right (Down) */}
-      <div className="absolute top-0 right-0 p-4">
+      <div className="absolute top-6 right-4 p-4">
         <Marquee pauseOnHover={true} direction="down">
           <img
             src="/posters/sholay.png"

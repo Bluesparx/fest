@@ -67,7 +67,7 @@ export function Marquee({
           }
         `}
       </style>
-      <div {...props} className={`filmstrip h-[500px] w-[200px] ${className}`}>
+      <div {...props} className={`filmstrip h-[90vh] w-[200px] ${className}`}>
         <div
           className={`flex flex-col ${
             direction === "up" ? "animate-marquee-up" : "animate-marquee-down"

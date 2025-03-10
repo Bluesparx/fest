@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Vortex } from "@/components/ui/vortex";
+import Hero from "@/components/Hero";
 
 const HomePage = () => {
   const [spotlightPos1, setSpotlightPos1] = useState({ x: 20, y: 30 });
@@ -86,7 +87,7 @@ const HomePage = () => {
       />
 
     </div>
-    <div> next section</div>
+    <Hero/>
     </div>
   );
 };

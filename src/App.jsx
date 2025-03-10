@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import HomePage from './pages/Landing';
 
 function App() {
-
   return (
     <>
       <HomePage/>    
@@ -11,4 +10,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

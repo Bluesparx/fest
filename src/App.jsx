@@ -1,17 +1,13 @@
-import './App.css'
-import { Button } from "@/components/ui/button";
+
+import Hero from "./components/Hero";
+
 
 function App() {
-
   return (
-    <>
-      <div>
-      <h1 className='text-green-100'>Taarangana</h1>    
-      <Button/>
-      </div>
-    
-    </>
-  )
+    <div className=" w-full bg-black" >
+      <Hero/>
+    </div>
+  );
 }
 
-export default App
+export default App;

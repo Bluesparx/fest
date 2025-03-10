@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [visible, setVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   
   const navItems = [
-    { label: 'Home', link: '#' },
-    { label: 'Events', link: '#' },
+    { label: 'Home', link: '/' },
+    { label: 'Events', link: '/events' },
     { label: 'Sponser', link: '#' },
     { label: 'Team ', link: '#' }
   ];
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
@@ -30,14 +32,15 @@ const Navbar = () => {
         <ul className="flex space-x-6">
           {navItems.map((item, index) => (
             <li key={index} className="relative">
-              <a 
-                href={item.link} 
-                className="px-18  text-font-imenglish text-lg text-red-700 text-center py-2 font-medium block relative z-10 hover:text-red-500 transition-colors"
+              <Link
+                to={item.link}
+                className="px-18 text-font-imenglish text-lg text-red-700 text-center py-2 font-medium block relative z-10 hover:text-red-500 transition-colors"
               >
                 {item.label}
-              </a>
+              </Link>
               <img 
-                src='public/nav.png'
+                src="/nav.png"
+                alt=""
                 className="absolute inset-0 rounded-md -z-0"
                 style={{
                   backgroundSize: 'cover',

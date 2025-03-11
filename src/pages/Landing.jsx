@@ -138,28 +138,33 @@ const HomePage = () => {
       
       {/* First Content Section */}
       <motion.div 
-        className="h-screen bg-yellow-600 text-black flex justify-center items-center sticky top-0 z-10"
-        style={{ opacity: section1Opacity }}
-      >
-        <motion.div 
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="text-center px-6"
-        >
-          <h1 className="text-5xl font-bold mb-6">sjj</h1>
-          <p className="text-xl max-w-xl mx-auto">
-            Experience 
-          </p>
-        </motion.div>
-      </motion.div>
+  className="h-screen bg-yellow-600 text-black flex justify-center items-center sticky top-0 z-10 bg-cover bg-center"
+  style={{ 
+    backgroundImage: "url('image.png')", 
+    opacity: section1Opacity 
+  }}
+>
+  <motion.div 
+    initial={{ y: 100, opacity: 0 }}
+    whileInView={{ y: 0, opacity: 1 }}
+    transition={{ duration: 0.8 }}
+    viewport={{ once: false, amount: 0.3 }}
+    className="text-center px-6 bg-black bg-opacity-50 p-8 rounded-lg backdrop-blur-xl"
+  >
+    <h1 className="text-5xl font-bold mb-6 text-white">About</h1>
+    <p className="text-xl max-w-xl mx-auto text-white">
+    Get ready for an electrifying experience at Taarangana, the most awaited cultural and technical extravaganza of the year! Immerse yourself in a whirlwind of music, dance, art, and innovation as we bring together students from across the country. From thrilling competitions and mesmerizing performances to insightful workshops and celebrity appearances, this fest is packed with excitement! Unleash your creativity, showcase your talent, and make unforgettable memories. Join us as we celebrate passion, culture, and innovation like never before!
+    </p>
+  </motion.div>
+</motion.div>
+
       
       {/* Second Content Section */}
       <motion.div 
-        className="h-screen bg-green-600 text-white flex justify-center items-center sticky top-0 z-0"
+        className="h-screen bg-black text-white flex justify-center items-center sticky top-0 z-0"
         style={{ opacity: section2Opacity }}
       >
+
         <motion.div 
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -167,6 +172,7 @@ const HomePage = () => {
           viewport={{ once: false, amount: 0.3 }}
           className="text-center px-6"
         >
+        
           <h1 className="text-5xl font-bold mb-6">theme </h1>
           <p>explain abt the theme random quote etc</p>
         </motion.div>

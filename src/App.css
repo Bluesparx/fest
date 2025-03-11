@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Kirang+Haerang&display=swap');
 @import "tailwindcss";
 
 @plugin "tailwindcss-animate";
@@ -7,6 +8,7 @@
 
 @theme {
   --font-imenglish: 'IM Fell English SC', sans-serif; 
+  --font-playful: 'Kirang Haerang', serif; 
 }
 
 /* #root {

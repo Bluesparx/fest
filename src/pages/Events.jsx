@@ -118,7 +118,7 @@ const EventsPage = () => {
     ><div className="relative overflow-x-hidden">
     <div className="w-full">
       <img src="events-bg.png" className="w-screen" style={{ height: "80%", width: "auto" }} />
-      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute inset-0 bg-black/30"></div>
     </div>
 
     <div className="w-screen absolute top-10 p-4 z-10">

@@ -5,6 +5,7 @@ import Navbar from './components/navbar';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Events from './pages/Events';
+import Team from './pages/Team';
 function App() {
   return (
     <Router>
@@ -13,6 +14,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/events" element={<Events />} />
+            <Route path="/team" element={<Team />} />
           </Routes>
         </div>
     </Router>

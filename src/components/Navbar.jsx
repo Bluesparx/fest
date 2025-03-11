@@ -9,7 +9,7 @@ const Navbar = () => {
     { label: '  Home  ', link: '/' },
     { label: ' Events ', link: '/events' },
     { label: 'Sponsers', link: '#' },
-    { label: '  Team  ', link: '#' }
+    { label: '  Team  ', link: '/team' }
   ];
 
   useEffect(() => {

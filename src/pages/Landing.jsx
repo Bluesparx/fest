@@ -46,19 +46,11 @@ const HomePage = () => {
         className="relative h-screen w-screen overflow-hidden bg-black sticky top-0 z-30"
         style={{ opacity: heroOpacity }}
       >
-        <Vortex
-          backgroundColor="black"
-          className="absolute inset-0 w-[100vw] h-screen z-0"
-        >
-          <div className="flex flex-col justify-center items-center h-full">
-            <img src="/public/title.png" style={{ width: "40%", height: "auto", margin: "10px auto" }} />
-            <p className="text-xl text-yellow-100 mb-8 max-w-lg mx-auto">28-29 March '25</p>
-            <button className="px-6 py-3 mx-auto bg-transparent border-2 border-yellow-400 text-yellow-300 font-bold rounded-md hover:bg-yellow-900/30 transition-all transform hover:scale-105 shadow-lg">
-              Explore Events
-            </button>
-          </div>
-        </Vortex>
-        
+        <Vortex backgroundColor="black" className="absolute inset-0 w-[100vw] h-screen z-0">
+      <div className="flex flex-col justify-center items-center h-full absolute bottom-0 top-10 w-full">
+        <img src="/posters/truck.png" alt="Truck" className="h-[40rem] max-w-3xl" />
+      </div>
+    </Vortex>
         {/* First spotlight with initial animation from top */}
         <motion.div
           className="absolute w-64 h-64 rounded-full z-10 mix-blend-screen pointer-events-none"

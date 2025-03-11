@@ -3,14 +3,14 @@ import { Card, CardContent, CardDescription } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 
 const events = [
-  { id: 1, image: "/public/event-poster.png", title: "Event 1", description: "THIS IS EVENT DESCRIPTION" },
-  { id: 2, image: "/public/event-poster.png", title: "Event 2", description: "THIS IS EVENT DESCRIPTION" },
-  { id: 3, image: "/public/event-poster.png", title: "Event 3", description: "THIS IS EVENT DESCRIPTION" },
-  { id: 4, image: "/public/event-poster.png", title: "Event 4", description: "THIS IS EVENT DESCRIPTION" },
-  { id: 5, image: "/public/event-poster.png", title: "Event 5", description: "THIS IS EVENT DESCRIPTION" },
-  { id: 6, image: "/public/event-poster.png", title: "Event 6", description: "THIS IS EVENT DESCRIPTION" },
-  { id: 7, image: "/public/event-poster.png", title: "Event 7", description: "THIS IS EVENT DESCRIPTION" },
-  { id: 8, image: "/public/event-poster.png", title: "Event 8", description: "THIS IS EVENT DESCRIPTION" },
+  { id: 1, image: "/event-poster.png", title: "Event 1", description: "THIS IS EVENT DESCRIPTION" },
+  { id: 2, image: "/event-poster.png", title: "Event 2", description: "THIS IS EVENT DESCRIPTION" },
+  { id: 3, image: "/event-poster.png", title: "Event 3", description: "THIS IS EVENT DESCRIPTION" },
+  { id: 4, image: "/event-poster.png", title: "Event 4", description: "THIS IS EVENT DESCRIPTION" },
+  { id: 5, image: "/event-poster.png", title: "Event 5", description: "THIS IS EVENT DESCRIPTION" },
+  { id: 6, image: "/event-poster.png", title: "Event 6", description: "THIS IS EVENT DESCRIPTION" },
+  { id: 7, image: "/event-poster.png", title: "Event 7", description: "THIS IS EVENT DESCRIPTION" },
+  { id: 8, image: "/event-poster.png", title: "Event 8", description: "THIS IS EVENT DESCRIPTION" },
 ];
 
 const EventCarousel = ({ dayTitle, activeIndex, setActiveIndex }) => {

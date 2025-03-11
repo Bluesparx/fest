@@ -8,8 +8,8 @@ const Navbar = () => {
   const navItems = [
     { label: '  Home  ', link: '/' },
     { label: ' Events ', link: '/events' },
-    { label: 'Sponsers', link: '#' },
-    { label: '  Team  ', link: '#' }
+    { label: 'Sponsors', link: '/sponsors' },
+    { label: '  Team  ', link: '/team' }
   ];
 
   useEffect(() => {

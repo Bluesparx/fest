@@ -52,7 +52,7 @@ const HomePage = () => {
           className="absolute inset-0 w-[100vw] h-screen z-0"
         >
           <div className="flex flex-col justify-center items-center h-[70vh]">
-            <img src="/public/title.png" style={{ width: "40%", height: "auto", margin: "10px auto" }} />
+            <img src="/title.png" style={{ width: "40%", height: "auto", margin: "10px auto" }} />
             <p className="text-xl font-imenglish text-yellow-100 mb-8 max-w-lg mx-auto">28-29 March '25</p>
             
           </div>
@@ -62,7 +62,7 @@ const HomePage = () => {
 
           <div className="relative flex justify-center items-center">
             <motion.img
-              src="/public/caricatures/1.png"
+              src="/caricatures/1.png"
               className="carousel-item"
               style={{ width: '45%', height: 'auto',  marginBottom: '-3rem' }}
               animate={{ 
@@ -93,7 +93,7 @@ const HomePage = () => {
             />
             
             <motion.img
-              src="/public/caricatures/5.png"
+              src="/caricatures/5.png"
               className="carousel-item"
               style={{ width: '40%', height: 'auto', marginBottom: '-2rem' }}
               animate={{ 

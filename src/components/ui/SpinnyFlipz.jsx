@@ -39,7 +39,7 @@ const SpinnyFlipz = () => {
     const spinTween = gsap.to(wheel, {
       rotation: "+=360",
       ease: "linear",
-      duration: 20,
+      duration: 70,
       repeat: -1,
     });
 
@@ -49,9 +49,9 @@ const SpinnyFlipz = () => {
   }, []);
 
   return (
-    <div className="w-screen h-[600vh] text-white font-nunito overflow-x-hidden">
-      <section className="absolute inset-0 w-full h-screen flex items-center justify-center overflow-hidden">
-        <div
+    <div className="w-screen h-full text-white font-nunito overflow-x-hidden">
+      <section className="absolute inset-x-0 top-[80px] w-full h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden">
+      <div
           ref={wheelRef}
           className="absolute top-0 flex items-center justify-center w-[300vw] h-[300vw] max-w-[2000px] max-h-[2000px] left-1/2 -translate-x-1/2"
         >

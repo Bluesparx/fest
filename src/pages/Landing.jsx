@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { Vortex } from "@/components/ui/vortex";
 import Hero from "@/components/Hero";
 
 const HomePage = () => {
-  const [spotlightPos1, setSpotlightPos1] = useState({ x: 20, y: 70 });
-  const [spotlightPos2, setSpotlightPos2] = useState({ x: 50, y: 80 });
+  const [spotlightPos1, setSpotlightPos1] = useState({ x: 30, y: 70 });
+  const [spotlightPos2, setSpotlightPos2] = useState({ x: 60, y: 80 });
   
   useEffect(() => {
     const animateSpotlights = () => {
@@ -13,7 +14,7 @@ const HomePage = () => {
       const intervalId1 = setInterval(() => {
         setSpotlightPos1({
           x: 10 + Math.random() * 35,
-          y: 15 + Math.random() * 30, 
+          y: Math.random() * 30, 
         });
       }, 2000);
       
@@ -21,7 +22,7 @@ const HomePage = () => {
       const intervalId2 = setInterval(() => {
         setSpotlightPos2({
           x: 55 + Math.random() * 35,
-          y: 10+ Math.random() * 30, // Keeps it in the top 30% of the screen
+          y: Math.random() * 30, 
         });
       }, 2500);
       
@@ -50,19 +51,73 @@ const HomePage = () => {
           backgroundColor="black"
           className="absolute inset-0 w-[100vw] h-screen z-0"
         >
-          <div className="flex flex-col justify-center items-center h-full">
+          <div className="flex flex-col justify-center items-center h-[80vh]">
             <img src="/public/title.png" style={{ width: "40%", height: "auto", margin: "10px auto" }} />
-            <p className="text-xl text-yellow-100 mb-8 max-w-lg mx-auto">28-29 March '25</p>
-            <button className="px-6 py-3 mx-auto bg-transparent border-2 border-yellow-400 text-yellow-300 font-bold rounded-md hover:bg-yellow-900/30 transition-all transform hover:scale-105 shadow-lg">
-              Explore Events
+            <p className="text-xl font-imenglish text-yellow-100 mb-8 max-w-lg mx-auto">28-29 March '25</p>
+            <Link to="/events">
+            <button className="px-6 py-3 mx-auto font-imenglish bg-transparent border-2 border-yellow-400 text-yellow-300 font-semibold rounded-md hover:bg-yellow-900/30 shadow-sm shadow shadow-yellow-800 transition-all transform hover:scale-105 shadow-lg">
+              Explore
             </button>
+            </Link>
           </div>
+
+          <div className="carousel absolute bottom-2 w-[30vw] left-1/2 transform -translate-x-1/2 flex justify-center items-center">
+          <div className="absolute bottom-[-60%] w-[30vw] h-[50vh] bg-yellow-300 rounded-full opacity-10 blur-xl"></div>
+
+          <div className="relative flex justify-center items-center">
+            <motion.img
+              src="/public/caricatures/1.png"
+              className="carousel-item"
+              style={{ width: '45%', height: 'auto' }}
+              animate={{ 
+                scale: [1, 1.06, 1],
+              }}
+              transition={{
+                duration: 4.5,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut"
+              }}
+            />
+            
+            <motion.img
+              src="/public/caricatures/5.png"
+              className="carousel-item"
+              style={{ width: '65%', height: 'auto', marginBottom: '4rem' }}
+              animate={{ 
+                scale: [1, 1.08, 1],
+              }}
+              transition={{
+                duration: 4.5,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+                delay: 0.7
+              }}
+            />
+            
+            <motion.img
+              src="/public/caricatures/3.png"
+              className="carousel-item"
+              style={{ width: '40%', height: 'auto', marginBottom: '1rem' }}
+              animate={{ 
+                scale: [1, 1.06, 1],
+              }}
+              transition={{
+                duration: 4.5,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+              }}
+            />
+          </div>
+        </div>
         </Vortex>
         
         {/* First spotlight with initial animation from top */}
         <motion.div
           className="absolute w-64 h-64 rounded-full z-10 mix-blend-screen pointer-events-none"
-          initial={{ left: `${spotlightPos1.x}%`, top: "-20%" }}
+          initial={{ left: `15%`, top: "-20%" }}
           animate={{ left: `${spotlightPos1.x}%`, top: `${spotlightPos1.y}%` }}
           transition={{ duration: 2, ease: "easeInOut" }}
           style={{
@@ -74,7 +129,7 @@ const HomePage = () => {
         {/* Second spotlight with initial animation from top */}
         <motion.div
           className="absolute w-64 h-64 rounded-full z-10 mix-blend-screen pointer-events-none"
-          initial={{ left: `${spotlightPos2.x}%`, top: "-20%" }}
+          initial={{ left: `40%`, top: "-20%" }}
           animate={{ left: `${spotlightPos2.x}%`, top: `${spotlightPos2.y}%` }}
           transition={{ duration: 2.5, ease: "easeInOut" }}
           style={{

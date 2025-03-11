@@ -6,10 +6,10 @@ const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   
   const navItems = [
-    { label: 'Home', link: '/' },
-    { label: 'Events', link: '/events' },
-    { label: 'Sponser', link: '#' },
-    { label: 'Team ', link: '#' }
+    { label: '  Home  ', link: '/' },
+    { label: ' Events ', link: '/events' },
+    { label: 'Sponsers', link: '#' },
+    { label: '  Team  ', link: '#' }
   ];
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const Navbar = () => {
             <li key={index} className="relative">
               <Link
                 to={item.link}
-                className="px-18 text-font-imenglish text-lg text-red-700 text-center py-2 font-medium block relative z-10 hover:text-red-500 transition-colors"
+                className="px-18 font-imenglish text-lg text-red-700 text-center py-4 font-medium block relative z-10 hover:text-red-500 transition-colors"
               >
                 {item.label}
               </Link>

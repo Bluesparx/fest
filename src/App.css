@@ -6,7 +6,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-imenglish: "IM English SC", sans-serif; 
+  --font-imenglish: 'IM Fell English SC', sans-serif; 
 }
 
 /* #root {

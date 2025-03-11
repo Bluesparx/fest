@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Vortex } from '@/components/ui/vortex';
 
 const sponsors = {
   titleSponsors: [
@@ -55,14 +54,8 @@ const SponsorSection = ({ title, sponsors, isTitle = false }) => (
 
 const SponsorsPage = () => {
   return (
-    <div className='relative min-h-screen'>
-      <div className='fixed h-screen'>
-      <Vortex
-        backgroundColor="black"
-        className="inset-0 w-[100vw] h-full z-0"
-      >
-        </Vortex>
-        </div>
+    <div className='relative bg-black min-h-screen'>
+      
       <div className="absolute top-0 z-10 w-[100vw] min-h-screen">
         <div className="container mx-auto mt-32 px-4">
           

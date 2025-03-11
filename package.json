@@ -27,6 +27,8 @@
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.3.0",
     "react-slick": "^0.30.3",
+    "react-typed": "^2.0.12",
+    "react-typewriter-effect": "^1.1.0",
     "simplex-noise": "^4.0.3",
     "slick-carousel": "^1.8.1",
     "tailwind-merge": "^3.0.2",

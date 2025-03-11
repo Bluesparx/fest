@@ -47,11 +47,69 @@ const HomePage = () => {
         className="relative h-screen w-screen overflow-hidden bg-black sticky top-0 z-30"
         style={{ opacity: heroOpacity }}
       >
-        <Vortex backgroundColor="black" className="absolute inset-0 w-[100vw] h-screen z-0">
-      <div className="flex flex-col justify-center items-center h-full absolute bottom-0 top-10 w-full">
-        <img src="/posters/truck.png" alt="Truck" className="h-[40rem] max-w-3xl" />
-      </div>
-    </Vortex>
+        <Vortex
+          backgroundColor="black"
+          className="absolute inset-0 w-[100vw] h-screen z-0"
+        >
+          <div className="flex flex-col justify-center items-center h-[70vh]">
+            <img src="/public/title.png" style={{ width: "40%", height: "auto", margin: "10px auto" }} />
+            <p className="text-xl font-imenglish text-yellow-100 mb-8 max-w-lg mx-auto">28-29 March '25</p>
+            
+          </div>
+
+          <div className="carousel absolute bottom-2 w-[35vw] left-1/2 transform -translate-x-1/2 flex justify-center items-center">
+          <div className="absolute bottom-[-60%] w-[30vw]  bg-yellow-300 rounded-full opacity-10 blur-xl"></div>
+
+          <div className="relative flex justify-center items-center">
+            <motion.img
+              src="/public/caricatures/1.png"
+              className="carousel-item"
+              style={{ width: '45%', height: 'auto',  marginBottom: '-3rem' }}
+              animate={{ 
+                scale: [0.9, 0.96, 0.9],
+              }}
+              transition={{
+                duration: 4.5,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut"
+              }}
+            />
+            
+            <motion.img
+              src="/posters/truck.png"
+              className="carousel-item"
+              style={{ width: 'auto', height: '100%', marginBottom: '6rem' }}
+              animate={{ 
+                scale: [1.1, 1.18, 1.1],
+              }}
+              transition={{
+                duration: 4.5,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+                delay: 0.7
+              }}
+            />
+            
+            <motion.img
+              src="/public/caricatures/5.png"
+              className="carousel-item"
+              style={{ width: '40%', height: 'auto', marginBottom: '-2rem' }}
+              animate={{ 
+                scale: [1, 1.06, 1],
+              }}
+              transition={{
+                duration: 4.5,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+              }}
+            />
+          </div>
+        </div>
+        </Vortex>
+        
         {/* First spotlight with initial animation from top */}
         <motion.div
           className="absolute w-64 h-64 rounded-full z-10 mix-blend-screen pointer-events-none"

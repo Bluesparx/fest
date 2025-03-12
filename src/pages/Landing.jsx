@@ -1,60 +1,65 @@
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useInView} from "framer-motion";
 import Hero from "@/components/Hero";
 import { FocusCardsDemo } from "@/components/FocusCardsDemo";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const aboutText =
   "Immerse yourself in a whirlwind of music, dance, art, and innovation as we bring together students from across the country. From thrilling competitions and mesmerizing performances to insightful workshops and celebrity appearances, this fest is packed with excitement! \n Unleash your creativity, showcase your talent, and make unforgettable memories. Join us as we celebrate passion, culture, and innovation like never before!";
-  const Typewriter = ({ text, speed = 50 }) => {
-    const [visibleCharCount, setVisibleCharCount] = useState(0);
-  
-    useEffect(() => {
-      let index = 0;
-      const interval = setInterval(() => {
-        if (index < text.length) {
-          setVisibleCharCount((prev) => prev + 1);
-          index++;
-        } else {
-          clearInterval(interval);
-        }
-      }, speed);
-      return () => clearInterval(interval);
-    }, [text, speed]);
-  
-    // Split the text by newline characters
-    const paragraphs = text.split("\n");
-    let charCounter = 0;
-  
-    return (
-      <span className="relative font-playful">
-        {paragraphs.map((paragraph, paragraphIndex) => (
-          <React.Fragment key={paragraphIndex}>
-            {paragraph.split("").map((char, charIndex) => {
-              const currentCharIndex = charCounter;
-              charCounter++;
-              return (
-                <span
-                  key={`${paragraphIndex}-${charIndex}`}
-                  className={`relative ${currentCharIndex < visibleCharCount ? "text-white" : "text-gray-500/30"}`}
-                >
-                  {char}
-                </span>
-              );
-            })}
-            {/* Add break after each paragraph except the last one */}
-            {paragraphIndex < paragraphs.length - 1 && (
-              <>
-                <br />
-                {/* Count the newline character in the typing animation */}
-                <span className="hidden">{charCounter++}</span>
-              </>
-            )}
-          </React.Fragment>
-        ))}
-      </span>
-    );
-  };
+
+
+const Typewriter = ({ text, speed = 50 }) => {
+  const [visibleCharCount, setVisibleCharCount] = useState(0);
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  useEffect(() => {
+    if (!isInView) return; 
+    let index = 0;
+    const interval = setInterval(() => {
+      if (index < text.length) {
+        setVisibleCharCount((prev) => prev + 1);
+        index++;
+      } else {
+        clearInterval(interval);
+      }
+    }, speed);
+    return () => clearInterval(interval);
+  }, [isInView, text, speed]);
+
+  // Split the text by newline characters
+  const paragraphs = text.split("\n");
+  let charCounter = 0;
+
+  return (
+    <span className="relative font-playful" ref={ref}>
+      {paragraphs.map((paragraph, paragraphIndex) => (
+        <React.Fragment key={paragraphIndex}>
+          {paragraph.split("").map((char, charIndex) => {
+            const currentCharIndex = charCounter;
+            charCounter++;
+            return (
+              <span
+                key={`${paragraphIndex}-${charIndex}`}
+                className={`relative ${currentCharIndex < visibleCharCount ? "text-white" : "text-gray-500/30"}`}
+              >
+                {char}
+              </span>
+            );
+          })}
+          {/* Add break after each paragraph except the last one */}
+          {paragraphIndex < paragraphs.length - 1 && (
+            <>
+              <br />
+              {/* Count the newline character in the typing animation */}
+              <span className="hidden">{charCounter++}</span>
+            </>
+          )}
+        </React.Fragment>
+      ))}
+    </span>
+  );
+};
 
 const HomePage = () => {
   return (

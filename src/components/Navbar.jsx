@@ -9,7 +9,7 @@ const Navbar = () => {
     { label: '  Home  ', link: '/' },
     { label: ' Events ', link: '/events' },
     { label: 'Sponsors', link: '/sponsors' },
-    { label: '  Itinerary ', link: '/iternery' },
+    { label: '  Itinerary ', link: '/itinerary' },
     { label: '  Team  ', link: '/team' }
   ];
 

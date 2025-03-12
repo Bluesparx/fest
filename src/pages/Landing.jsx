@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import { FocusCardsDemo } from "@/components/FocusCardsDemo";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Footer from "@/components/Footer";
+import Gallery from "@/components/ui/gallery";
 
 const aboutText =
   "Immerse yourself in a whirlwind of music, dance, art, and innovation as we bring together students from across the country. From thrilling competitions and mesmerizing performances to insightful workshops and celebrity appearances, this fest is packed with excitement! \n Unleash your creativity, showcase your talent, and make unforgettable memories. Join us as we celebrate passion, culture, and innovation like never before!";
@@ -143,14 +144,12 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* Performances Section */}
-      <div className="bg-black text-white py-16">
-        <div className="text-center px-6">
-          <h1 className="text-5xl font-bold mb-6 font-imenglish">
-            Unforgettable Performances
-          </h1>
-          <FocusCardsDemo />
-        </div>
+      <div className="bg-black h-[90vh] flex flex-col px-8 align-center justify-center text-white py-16">
+        
+      <h2 className="font-imenglish text-5xl text-center py-10">Unforgettable Performances</h2>
+        <div>
+          <Gallery />
+          </div>
       </div>
 
       <div className="min-h-[70vh]" style={{backgroundImage: `url(/image.png)`, backgroundSize: 'cover', backgroundBlendMode: 'overlay'}}>

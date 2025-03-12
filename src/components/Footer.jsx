@@ -32,10 +32,10 @@ const Footer = () => {
   return (
     <div
       className="sticky flex-1 bottom-0 left-0 w-full bg-black text-white py-12 z-10 flex flex-col items-center justify-center overflow-hidden bg-cover bg-center"
-      style={{ backgroundImage: "url('/orange.jpg')" }}
+      
     >
       {/* Logo */}
-      <img src="/title.png" alt="Fest Logo" className="w-140 h-60  mt-10" />
+      <img src="/title.png" alt="Fest Logo" className="w-140 h-60  mt-20" />
 
       {/* Countdown Timer */}
       <div className="text-center mb-20 font-imenglish ">
@@ -63,8 +63,10 @@ const Footer = () => {
       </div>
 
       {/* Copyright */}
-      <p className="text-gray-400 text-md mb-2">@2025 IGDTUW. All rights reserved.</p>
-      <p className="text-gray-100 text-lg mt-1 mb-10">Magic created by Riddhi & Nazia ✨</p>
+      <p className="text-gray-200 text-sm font-serif mb-2">@Taarangana'25 IGDTUW. All rights reserved.</p>
+      <span className="text-gray-100 text-xl font-playful mt-1 mb-10">
+      Directed and created by <span className="text-red-400 inline">Riddhi</span> and <span className="text-red-400 inline">Nazia</span> ✨ 
+      </span>
     </div>
   );
 };

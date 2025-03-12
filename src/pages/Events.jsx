@@ -16,14 +16,10 @@ const events = [
 const EventsPage = () => {
   return (
     <>
-    <div className="relative min-h-screen overflow-hidden ">
-      <div className="relative overflow-x-hidden z-20 min-h-screen">
-        <div className="w-full">
-          <img src="events-bg.png" className="w-screen" style={{ height: "100%", width: "auto" }} />
-          <div className="absolute inset-0 bg-black/30"></div>
-        </div>
-
-        <div className="w-screen absolute top-10 p-4 z-10">
+    <div className="relative overflow-x-hidden z-20 min-h-screen  bg-cover bg-center bg-no-repeat overflow-hidden" style={{ backgroundImage: "url('/events-bg.png')"}}>
+    <div className=" top-0 z-10 w-[100vw] min-h-screen justify-center flex items-center flex-col bg-black/30">
+    
+    <div className="relative  min-h-screen ">
           <header className="text-center mt-38">
             <h1 className="text-5xl font-imenglish font-semibold mb-4">Events</h1>
           </header>

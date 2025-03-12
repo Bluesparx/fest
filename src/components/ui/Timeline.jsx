@@ -30,7 +30,7 @@ export default function HorizontalTimeline({ events }) {
           transition={{ ease: "linear", duration: 2, repeat: Infinity }}
         />
 
-        <div className="w-full flex justify-between items-center border-t-4 border-yellow-500/40 relative">
+        <div className="w-full flex gap-8 justify-between items-center border-t-4 border-yellow-500/40 relative">
           {events.map((event, index) => (
             <div key={index} className="relative flex flex-col items-center cursor-pointer space-y-4">
               {/* Timeline Dot */}

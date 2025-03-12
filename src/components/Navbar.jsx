@@ -8,8 +8,8 @@ const Navbar = () => {
   const navItems = [
     { label: '  Home  ', link: '/' },
     { label: ' Events ', link: '/events' },
-    { label: 'Sponsors', link: '/sponsors' },
     { label: '  Itinerary ', link: '/itinerary' },
+    { label: 'Sponsors', link: '/sponsors' },
     { label: '  Team  ', link: '/team' }
   ];
 

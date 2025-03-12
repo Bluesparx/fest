@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import HorizontalTimeline from "@/components/ui/Timeline";
 import React from "react";
 
@@ -32,6 +33,9 @@ const day2EventsPart2 = [
 
 const Itinerary = () => {
   return (
+    <>
+    <div className="relative min-h-screen overflow-hidden ">
+    <div className="relative overflow-x-hidden z-20 min-h-screen">
     <div className="relative  min-h-screen ">
       <div className=" top-0 z-10 w-[100vw] min-h-screen justify-center flex items-center flex-col  bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/curtain.jpg')"}}>
         
@@ -65,6 +69,10 @@ const Itinerary = () => {
         </div>
       </div>
     </div>
+    </div>
+    </div>
+    <Footer/>
+    </>
   );
 };
 

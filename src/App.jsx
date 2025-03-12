@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Events from './pages/Events';
 import Team from './pages/Team';
 import SponsorsPage from './pages/Sponsors';
+import Iternery from './pages/Iternery';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/events" element={<Events />} />
             <Route path="/team" element={<Team />} />
             <Route path="/sponsors" element={<SponsorsPage/>} />
+            <Route path="/iternery" element={<Iternery/>} />
           </Routes>
         </div>
     </Router>

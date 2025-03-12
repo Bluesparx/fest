@@ -10,6 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.4.7",
+    "@mui/material": "^6.4.7",
     "@radix-ui/react-slot": "^1.1.2",
     "@tabler/icons-react": "^3.31.0",
     "@tailwindcss/vite": "^4.0.12",
@@ -29,6 +33,7 @@
     "react-slick": "^0.30.3",
     "react-typed": "^2.0.12",
     "react-typewriter-effect": "^1.1.0",
+    "react-vertical-timeline-component": "^3.5.3",
     "simplex-noise": "^4.0.3",
     "slick-carousel": "^1.8.1",
     "tailwind-merge": "^3.0.2",

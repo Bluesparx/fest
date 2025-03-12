@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import Footer from '@/components/Footer';
 
 const sponsors = {
   titleSponsors: [
@@ -54,9 +55,10 @@ const SponsorSection = ({ title, sponsors, isTitle = false }) => (
 
 const SponsorsPage = () => {
   return (
-    <div className='relative bg-black min-h-screen'>
+    <>
+    <div className="relative overflow-x-hidden z-20 min-h-screen bg-[#650000] w-[100vw]">
       
-      <div className="absolute top-0 z-10 w-[100vw] min-h-screen">
+      <div className="absolute top-0 z-20 w-[100vw] min-h-screen">
         <div className="container mx-auto mt-32 px-4">
           
           <SponsorSection 
@@ -77,6 +79,8 @@ const SponsorsPage = () => {
         </div>
       </div>
       </div>
+      <Footer/>
+      </>
   );
 };
 

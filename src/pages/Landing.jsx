@@ -4,26 +4,56 @@ import Hero from "@/components/Hero";
 import { FocusCardsDemo } from "@/components/FocusCardsDemo";
 
 const aboutText =
-  "Get ready for an electrifying experience at Taarangana, the most awaited cultural and technical extravaganza of the year! Immerse yourself in a whirlwind of music, dance, art, and innovation as we bring together students from across the country. From thrilling competitions and mesmerizing performances to insightful workshops and celebrity appearances, this fest is packed with excitement! Unleash your creativity, showcase your talent, and make unforgettable memories. Join us as we celebrate passion, culture, and innovation like never before!";
-
-const Typewriter = ({ text, speed = 50 }) => {
-  const [displayedText, setDisplayedText] = useState("");
-
-  useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      if (index < text.length) {
-        setDisplayedText((prev) => prev + text[index]);
-        index++;
-      } else {
-        clearInterval(interval);
-      }
-    }, speed);
-    return () => clearInterval(interval);
-  }, [text, speed]);
-
-  return <span>{displayedText}</span>;
-};
+  "Immerse yourself in a whirlwind of music, dance, art, and innovation as we bring together students from across the country. From thrilling competitions and mesmerizing performances to insightful workshops and celebrity appearances, this fest is packed with excitement! \n Unleash your creativity, showcase your talent, and make unforgettable memories. Join us as we celebrate passion, culture, and innovation like never before!";
+  const Typewriter = ({ text, speed = 50 }) => {
+    const [visibleCharCount, setVisibleCharCount] = useState(0);
+  
+    useEffect(() => {
+      let index = 0;
+      const interval = setInterval(() => {
+        if (index < text.length) {
+          setVisibleCharCount((prev) => prev + 1);
+          index++;
+        } else {
+          clearInterval(interval);
+        }
+      }, speed);
+      return () => clearInterval(interval);
+    }, [text, speed]);
+  
+    // Split the text by newline characters
+    const paragraphs = text.split("\n");
+    let charCounter = 0;
+  
+    return (
+      <span className="relative font-playful">
+        {paragraphs.map((paragraph, paragraphIndex) => (
+          <React.Fragment key={paragraphIndex}>
+            {paragraph.split("").map((char, charIndex) => {
+              const currentCharIndex = charCounter;
+              charCounter++;
+              return (
+                <span
+                  key={`${paragraphIndex}-${charIndex}`}
+                  className={`relative ${currentCharIndex < visibleCharCount ? "text-white" : "text-gray-500/30"}`}
+                >
+                  {char}
+                </span>
+              );
+            })}
+            {/* Add break after each paragraph except the last one */}
+            {paragraphIndex < paragraphs.length - 1 && (
+              <>
+                <br />
+                {/* Count the newline character in the typing animation */}
+                <span className="hidden">{charCounter++}</span>
+              </>
+            )}
+          </React.Fragment>
+        ))}
+      </span>
+    );
+  };
 
 const HomePage = () => {
   return (
@@ -35,9 +65,10 @@ const HomePage = () => {
         <div className="flex flex-col justify-center items-center h-[70vh]">
           <img
             src="/title.png"
-            style={{ width: "40%", height: "auto", margin: "10px auto" }}
+            alt="Title"
+            className="w-[40%] h-auto mb-4"
           />
-          <p className="text-xl font-imenglish text-yellow-100 mb-8 max-w-lg mx-auto">
+          <p className="text-xl font-imenglish text-gray-300 mb-8 max-w-lg mx-auto">
             28-29 March '25
           </p>
         </div>
@@ -89,20 +120,25 @@ const HomePage = () => {
       </div>
 
       <div
-        className="h-screen bg-yellow-600 text-black flex justify-center items-center bg-cover bg-center"
+        className="h-[78vh] bg-yellow-600 flex justify-center items-center bg-cover bg-center"
         style={{ backgroundImage: "url('image.png')" }}
       >
-        <div className="text-center px-6 bg-black bg-opacity-50 p-8 rounded-lg backdrop-blur-xl">
-          <h1 className="text-5xl font-bold mb-6 text-white font-imenglish">IGDTUW's Cultural Fest</h1>
+        <div className="text-center px-16 bg-black/40 p-8 rounded-lg backdrop-blur-xl">
+          <h1 className="text-5xl font-bold mb-6 text-white font-imenglish">
+            IGDTUW's Cultural Fest
+          </h1>
           <p className="text-xl max-w-xl mx-auto text-white">
             <Typewriter text={aboutText} speed={30} />
           </p>
         </div>
       </div>
 
-      <div className=" bg-black text-white pt-16 pb-10">
+      {/* Performances Section */}
+      <div className="bg-black text-white pt-16 pb-10">
         <div className="text-center px-6">
-          <h1 className="text-5xl font-bold mb-6 font-imenglish"> Unforgettable Performances</h1>
+          <h1 className="text-5xl font-bold mb-6 font-imenglish">
+            Unforgettable Performances
+          </h1>
           <FocusCardsDemo />
         </div>
       </div>

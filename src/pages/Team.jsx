@@ -1,5 +1,4 @@
 import React from "react";
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 
 const teamMembers = [
   { id: 1, image: "/posters/demo.png", name: "Prakriti Jaiswal", position: "President" },
@@ -29,31 +28,28 @@ const TeamsPage = () => {
         </header>
 
         {/* Carousel */}
-        <div className="relative w-[85vw] md:w-[80vw] mx-auto">
-          <Carousel>
-            <CarouselContent className="-ml-4 gap-x-6">
-              {teamMembers.map((member) => (
-                <CarouselItem key={member.id} className="pl-4 md:basis-1/3 lg:basis-1/4 flex flex-col items-center">
-                  {/* Square Container with Blur & Black Background */}
-                  <div className="w-64 h-72 md:w-72 md:h-80 lg:w-80 lg:h-96 bg-black/60 backdrop-blur-md rounded-lg flex flex-col items-center justify-center shadow-lg p-4">
-                    {/* Circular Image inside Square */}
-                    <div className="w-44 h-44 md:w-52 md:h-52 lg:w-56 lg:h-56 overflow-hidden rounded-full border-4 border-yellow-400">
-                      <img 
-                        src={member.image} 
-                        alt={member.name} 
-                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
-                      />
-                    </div>
-                    {/* Name and Position Inside the Square */}
-                    <h3 className="mt-4 text-xl lg:text-2xl font-bold text-center font-imenglish text-white">{member.name}</h3>
-                    <p className="text-sm lg:text-lg text-gray-300 font-imenglish">{member.position}</p>
+        <div className="relative w-[85vw] md:w-[80vw] mx-auto overflow-hidden">
+          <div className="flex animate-marquee gap-x-6">
+            {teamMembers.concat(teamMembers).map((member) => (
+              <div key={member.id} className="pl-4 md:basis-1/3 lg:basis-1/4 flex flex-col items-center">
+                
+                <div className="w-64 h-72 md:w-72 md:h-80 lg:w-80 lg:h-96 bg-black/50 backdrop-blur-md rounded-lg flex flex-col items-center justify-center shadow-lg p-4">
+                  
+                  <div className="w-44 h-44 md:w-52 md:h-52 lg:w-56 lg:h-56 overflow-hidden rounded-full border-4 border-yellow-400">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    />
                   </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="left-1 bg-red-600/80 hover:bg-red-600 border-none text-white shadow-lg scale-125" />
-            <CarouselNext className="right-1 bg-red-600/80 hover:bg-red-600 border-none text-white shadow-lg scale-125" />
-          </Carousel>
+                  <h3 className="mt-4 text-xl lg:text-2xl font-bold text-center font-imenglish text-white">
+                    {member.name}
+                  </h3>
+                  <p className="text-sm lg:text-lg text-gray-300 font-playful">{member.position}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

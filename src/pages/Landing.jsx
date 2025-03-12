@@ -3,6 +3,7 @@ import { motion, useInView} from "framer-motion";
 import Hero from "@/components/Hero";
 import { FocusCardsDemo } from "@/components/FocusCardsDemo";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import Footer from "@/components/Footer";
 
 const aboutText =
   "Immerse yourself in a whirlwind of music, dance, art, and innovation as we bring together students from across the country. From thrilling competitions and mesmerizing performances to insightful workshops and celebrity appearances, this fest is packed with excitement! \n Unleash your creativity, showcase your talent, and make unforgettable memories. Join us as we celebrate passion, culture, and innovation like never before!";
@@ -63,9 +64,12 @@ const Typewriter = ({ text, speed = 50 }) => {
 
 const HomePage = () => {
   return (
+    <>
+    <div className="relative min-h-screen overflow-hidden ">
+    <div className="relative overflow-x-hidden z-20 min-h-screen">
     <div className="relative overflow-x-hidden">
       <div
-        className="relative h-screen w-screen overflow-hidden bg-cover bg-center"
+        className="relative h-screen w-screen overflow-hidden bg-cover bg-center "
         style={{ backgroundImage: "url('/bg-vortex.png')" }}
       >
         <div className="flex flex-col justify-center items-center h-[70vh]">
@@ -226,6 +230,11 @@ const HomePage = () => {
       </div>
       </div>
     </div>
+    </div>
+    </div>
+    
+    <Footer/>
+    </>
   );
 };
 

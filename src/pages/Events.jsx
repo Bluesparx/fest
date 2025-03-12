@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import StackedCards from "@/components/StackedCards";
+import Footer from "@/components/Footer";
 
 const events = [
   { id: 1, image: "/event-poster.png", title: "Event 1", description: "THIS IS EVENT DESCRIPTION" },
@@ -14,10 +15,11 @@ const events = [
 
 const EventsPage = () => {
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      <div className="relative overflow-x-hidden">
+    <>
+    <div className="relative min-h-screen overflow-hidden ">
+      <div className="relative overflow-x-hidden z-20 min-h-screen">
         <div className="w-full">
-          <img src="events-bg.png" className="w-screen" style={{ height: "80%", width: "auto" }} />
+          <img src="events-bg.png" className="w-screen" style={{ height: "100%", width: "auto" }} />
           <div className="absolute inset-0 bg-black/30"></div>
         </div>
 
@@ -36,6 +38,8 @@ const EventsPage = () => {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 

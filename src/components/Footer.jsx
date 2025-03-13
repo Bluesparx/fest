@@ -42,8 +42,8 @@ const Footer = () => {
         <div className="flex justify-center gap-6 mt-1 font-imenglish">
           {["days", "hours", "minutes", "seconds"].map((unit, index) => (
             <div key={index} className="flex flex-col items-center font-imenglish">
-              <span className="text-7xl font-bold font-imenglish">{timeLeft[unit]}</span>
-              <span className="text-xl text-gray-200 font-imenglish">{unit}</span>
+              <span className="md:text-7xl text-4xl font-bold font-imenglish">{timeLeft[unit]}</span>
+              <span className="text-xl text-gray-200 font-playful">{unit}</span>
             </div>
           ))}
         </div>
@@ -63,9 +63,9 @@ const Footer = () => {
       </div>
 
       {/* Copyright */}
-      <p className="text-gray-200 text-sm font-serif mb-2">@Taarangana'25 IGDTUW. All rights reserved.</p>
-      <span className="text-gray-100 text-xl font-playful mt-1 mb-10">
-      Directed and created by <a href="https://www.linkedin.com/in/riddhi-rustagi-9a1976257" className="text-red-400 inline">Riddhi</a> and <a href="https://naziahassan.vercel.app" className="text-red-400 inline">Nazia</a> ✨ 
+      <p className="text-gray-200 md:text-sm  text-xs font-serif mb-2">@Taarangana'25 IGDTUW. All rights reserved.</p>
+      <span className="text-gray-100 md:text-xl text-md font-playful mt-1 mb-10">
+      Directed and created by <a href="https://www.linkedin.com/in/riddhi-rustagi-9a1976257" className="text-red-400 inline hover:text-red-500">Riddhi</a> and <a href="https://naziahassan.vercel.app" className="text-red-400 hover:text-red-500 inline">Nazia</a> ✨ 
       </span>
     </div>
   );

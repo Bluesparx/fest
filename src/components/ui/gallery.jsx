@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const Gallery = () => {
   const images = [
@@ -10,8 +10,10 @@ const Gallery = () => {
     { id: 6, src: "/gallery/6.jpg", alt: "Gallery image 6", title: "Tech Exhibition", rotation: 1, marginTop: "12px" },
     { id: 7, src: "/gallery/7.jpg", alt: "Gallery image 7", title: "Tech Exhibition", rotation: 1, marginTop: "12px" },
   ];
-
   const [position, setPosition] = useState(0);
+  const [touchStartX, setTouchStartX] = useState(0);
+  const [touchEndX, setTouchEndX] = useState(0);
+  const galleryRef = useRef(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -21,8 +23,30 @@ const Gallery = () => {
     return () => clearInterval(interval);
   }, [images.length]);
 
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEndX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX - touchEndX > 50) {
+      setPosition((prevPosition) => prevPosition - 220); // lef
+    } else if (touchEndX - touchStartX > 50) {
+      setPosition((prevPosition) => prevPosition + 220); // right
+    }
+  };
+
   return (
-    <div className="w-[90vw] overflow-hidden relative mx-auto">
+    <div
+      className="w-[90vw] overflow-hidden relative mx-auto"
+      ref={galleryRef}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       {/* Carousel container */}
       <div className="w-full pt-12 pb-20 overflow-hidden">
         <div
@@ -52,8 +76,8 @@ const Gallery = () => {
       </div>
 
       {/* Gradient overlays */}
-      <div className="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-black to-transparent"></div>
-      <div className="absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-black to-transparent"></div>
+      <div className="absolute top-0 left-0 h-full md:w-24 w-2 bg-gradient-to-r from-black to-transparent"></div>
+      <div className="absolute top-0 right-0 h-full md:w-24 w-2 bg-gradient-to-l from-black to-transparent"></div>
     </div>
   );
 };

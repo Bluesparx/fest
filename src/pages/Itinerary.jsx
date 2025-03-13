@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import HorizontalTimeline from "@/components/ui/Timeline";
+import VerticalTimeline from "@/components/ui/VerticalTimeline";
 import React from "react";
 
 const day1Events = [
@@ -40,33 +41,49 @@ const Itinerary = () => {
     <div className="relative  min-h-screen ">
 
         {/* Itinerary Heading */}
-        <h1 className="text-6xl font-bold text-center text-yellow-500 mb-10 mt-36 font-imenglish">Itinerary</h1>
+        <h1 className="text-6xl font-bold text-center text-yellow-500 mb-10 mt-36 font-imenglish sm:text-6xl">Itinerary</h1>
 
         {/* Day 1 Heading */}
-        <p className="text-4xl font-bold text-center text-white mb-6 font-imenglish">Day 1 (Cinema Day)</p>
+        <p className="text-4xl font-bold text-center text-white mb-6 font-imenglish sm:text-4xl">Day 1 (Cinema Day)</p>
         
         {/* Day 1 - First Timeline */}
-        <div className="w-full max-w-6xl">
+        <div className="w-full max-w-6xl sm:block  hidden ">
           <HorizontalTimeline events={day1Events} />
         </div>
 
+        <div className="w-full max-w-md block sm:hidden">
+              <VerticalTimeline events={day1Events} />
+            </div>
+
         {/* Day 1 - Second Timeline */}
-        <div className="w-full max-w-6xl mt-10">
+        <div className="w-full max-w-6xl mt-10 hidden sm:block">
           <HorizontalTimeline events={day1EventsPart2} />
         </div>
 
+        <div className="w-full max-w-md mt-10 block sm:hidden">
+              <VerticalTimeline events={day1EventsPart2} />
+            </div>
+
         {/* Day 2 Heading */}
-        <p className="text-4xl font-bold text-center text-white mt-20 mb-6 font-imenglish">Day 2 (Pronite Day)</p>
+        <p className="text-4xl sm:text-4xl font-bold text-center text-white mt-20 mb-6 font-imenglish">Day 2 (Pronite Day)</p>
         
         {/* Day 2 - First Timeline */}
-        <div className="w-full max-w-6xl">
+        <div className="w-full max-w-6xl hidden sm:block">
           <HorizontalTimeline events={day2Events} />
         </div>
 
+        <div className="w-full max-w-md block sm:hidden">
+              <VerticalTimeline events={day2Events} />
+            </div>
+
         {/* Day 2 - Second Timeline */}
-        <div className="w-full max-w-6xl mt-10">
+        <div className="w-full max-w-6xl mt-10 hidden sm:block">
           <HorizontalTimeline events={day2EventsPart2} />
         </div>
+
+        <div className="w-full max-w-md block sm:hidden mb-4">
+              <VerticalTimeline events={day2EventsPart2} />
+            </div>
       </div>
     </div>
     </div>

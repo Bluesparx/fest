@@ -35,7 +35,7 @@ export default function HorizontalTimeline({ events }) {
             <div key={index} className="relative flex flex-col items-center cursor-pointer space-y-4">
               {/* Timeline Dot */}
               <div className="w-6 h-6 bg-yellow-700 rounded-full mt-[-12px]"></div>
-              <span className="text-lg mb-2 font-playful">{event.time}</span>
+              <span className="text-lg mb-2 font-playful text-white">{event.time}</span>
 
               {/* Flip Card */}
               <motion.div

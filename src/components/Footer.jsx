@@ -65,7 +65,7 @@ const Footer = () => {
       {/* Copyright */}
       <p className="text-gray-200 text-sm font-serif mb-2">@Taarangana'25 IGDTUW. All rights reserved.</p>
       <span className="text-gray-100 text-xl font-playful mt-1 mb-10">
-      Directed and created by <span className="text-red-400 inline">Riddhi</span> and <span className="text-red-400 inline">Nazia</span> ✨ 
+      Directed and created by <a href="https://www.linkedin.com/in/riddhi-rustagi-9a1976257" className="text-red-400 inline">Riddhi</a> and <a href="https://naziahassan.vercel.app" className="text-red-400 inline">Nazia</a> ✨ 
       </span>
     </div>
   );

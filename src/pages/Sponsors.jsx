@@ -56,11 +56,11 @@ const SponsorSection = ({ title, sponsors, isTitle = false }) => (
 const SponsorsPage = () => {
   return (
     <>
-    <div className="relative overflow-x-hidden z-20 min-h-screen bg-[#650000] w-[100vw]">
-      
-      <div className="absolute top-0 z-20 w-[100vw] min-h-screen">
-        <div className="container mx-auto mt-32 px-4">
-          
+    <div className="relative overflow-x-hidden z-20 min-h-screen bg-[#6d0203] overflow-hidden ">
+    <div className=" top-0 z-10 w-[100vw] min-h-screen justify-center flex items-center flex-col bg-black/10">
+    
+    <div className="relative  min-h-screen w-[75vw] mt-38 mb-8">
+
           <SponsorSection 
             title="Title Sponsors" 
             sponsors={sponsors.titleSponsors} 

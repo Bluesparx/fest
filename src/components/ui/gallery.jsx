@@ -35,7 +35,7 @@ const Gallery = () => {
               className="relative transform transition-all duration-300 ease-out"
               style={{ transform: `rotate(${image.rotation}deg)`, marginTop: image.marginTop }}
             >
-              <div className="w-52 h-64 p-3 bg-white shadow-xl group hover:bg-white/40 transition-all  duration-300">
+              <div className="w-52 h-64 p-3 bg-white shadow-xl group hover:bg-white/70 transition-all  duration-300">
                 <img
                   src={image.src}
                   alt={image.alt}

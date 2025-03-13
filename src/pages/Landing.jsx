@@ -5,10 +5,12 @@ import { FocusCardsDemo } from "@/components/FocusCardsDemo";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Footer from "@/components/Footer";
 import Gallery from "@/components/ui/gallery";
+import { Vortex } from "@/components/ui/vortex";
 
 const aboutText =
   "Immerse yourself in a whirlwind of music, dance, art, and innovation as we bring together students from across the country. From thrilling competitions and mesmerizing performances to insightful workshops and celebrity appearances, this fest is packed with excitement! \n Unleash your creativity, showcase your talent, and make unforgettable memories. Join us as we celebrate passion, culture, and innovation like never before!";
 
+const smallAbout = " From thrilling competitions and mesmerizing performances to insightful workshops and celebrity appearances, this fest is packed with excitement! \n Unleash your creativity, showcase your talent, and make unforgettable memories."
 
 const Typewriter = ({ text, speed = 50 }) => {
   const [visibleCharCount, setVisibleCharCount] = useState(0);
@@ -16,7 +18,7 @@ const Typewriter = ({ text, speed = 50 }) => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   useEffect(() => {
-    if (!isInView) return; 
+    if (!isInView) return;
     let index = 0;
     const interval = setInterval(() => {
       if (index < text.length) {
@@ -64,11 +66,90 @@ const Typewriter = ({ text, speed = 50 }) => {
 };
 
 const HomePage = () => {
+
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 840);
+
+  // Use effect to update the state on screen resize
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 768);
+    };
+
+    // Listen for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+
   return (
     <>
     <div className="relative min-h-screen overflow-hidden ">
     <div className="relative overflow-x-hidden z-20 min-h-screen">
-    <div className="relative overflow-x-hidden">
+    <div className="relative overflow-hidden">
+    {isSmallScreen ? (
+              <Vortex className="h-screen">
+                <div className="flex flex-col justify-center items-evenly pt-20">
+                  <div className="ml-4 flex flex-row gap-4 mb-30">
+                     <motion.img
+                       src="/caricatures/1.png"
+                       className="carousel-item"
+                       style={{ width: "45%", height: "auto", marginBottom: "-3rem" }}
+                       animate={{ scale: [0.9, 0.96, 0.9] }}
+                       transition={{
+                         duration: 4.5,
+                         repeat: Infinity,
+                         repeatType: "reverse",
+                         ease: "easeInOut",
+                       }}
+                     />
+                     <motion.img
+                       src="/caricatures/5.png"
+                       className="carousel-item"
+                       style={{ width: "40%", height: "auto", marginBottom: "-2rem" }}
+                       animate={{ scale: [1, 1.06, 1] }}
+                       transition={{
+                         duration: 4.5,
+                         repeat: Infinity,
+                         repeatType: "reverse",
+                         ease: "easeInOut",
+                       }}
+                     />
+                  </div>
+
+          <img
+            src="/title.png"
+            alt="Title"
+            className="md:w-[40%] w-[80%] h-auto mb-4 mx-auto "
+          />
+          <p className="text-xl font-imenglish text-gray-300 mb-8 max-w-lg mx-auto">
+            28-29 March '25
+          </p>
+        </div>
+
+          <div className="absolute bottom-[-60%] w-[80vw] bg-yellow-300 rounded-full opacity-10 blur-xl"></div>
+          <div className="relative flex justify-center items-center">
+            
+            <motion.img
+              src="/posters/truck.png"
+              className="carousel-item"
+              style={{ width: "100%", height: "auto", marginBottom: "6rem" }}
+              animate={{ scale: [1.1, 1.18, 1.1] }}
+              transition={{
+                duration: 4.5,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+                delay: 0.7,
+              }}
+            />
+          </div>
+        </Vortex> 
+        ) : (
+          <>
       <div
         className="relative h-screen w-screen overflow-hidden bg-cover bg-center "
         style={{ backgroundImage: "url('/bg-vortex.png')" }}
@@ -125,26 +206,33 @@ const HomePage = () => {
               }}
             />
           </div>
+        </div> 
         </div>
+        </>
+        )}
 
-        <Hero />
+        {!isSmallScreen && <Hero />}
       </div>
 
       <div
-        className="h-[78vh] bg-yellow-600 flex justify-center items-center bg-cover bg-center"
+        className="md:h-[80vh] h-[100vh] bg-yellow-600 flex justify-center items-center bg-cover bg-center"
         style={{ backgroundImage: "url('image.png')" }}
       >
-        <div className="text-center px-16 bg-black/40 p-8 rounded-lg backdrop-blur-xl">
-          <h1 className="text-5xl font-bold mb-6 text-white font-imenglish">
+        <div className="text-center  md:w-[60vw] bg-black/40 p-8 md:rounded-lg backdrop-blur-xl">
+          <h1 className="text-4xl text-center md:text-5xl font-bold mb-6 text-white font-imenglish">
             IGDTUW's Cultural Fest
           </h1>
           <p className="text-xl max-w-xl mx-auto text-white">
+          {isSmallScreen ? (
+            <Typewriter text={smallAbout} speed={30} />
+          ) : (
             <Typewriter text={aboutText} speed={30} />
+          )}
           </p>
         </div>
       </div>
 
-      <div className="bg-black h-[90vh] flex flex-col px-8 align-center justify-center text-white py-16">
+      <div className="bg-black h-[100vh] flex flex-col md:px-8 align-center justify-center text-white py-20">
         
       <h2 className="font-imenglish text-5xl text-center py-10">Unforgettable Performances</h2>
         <div>
@@ -155,15 +243,15 @@ const HomePage = () => {
       <div className="min-h-[70vh]" style={{backgroundImage: `url(/image.png)`, backgroundSize: 'cover', backgroundBlendMode: 'overlay'}}>
       <div className="min-h-[70vh] flex flex-col md:flex-row lg:flex-row justify-center align-center bg-black/40">
         
-        <div className="flex-1 px-8 py-16 align-center justify-center flex flex-col mb-8">
-          <h1 className="text-5xl font-bold text-white font-imenglish mb-4">Frequently Asked Questions</h1>
+        <div className="flex-1 px-8 md:py-16 pt-10 md:pt-0 align-center justify-center flex flex-col md:mb-8">
+          <h1 className="text-5xl font-bold text-white font-imenglish md:mb-4">Frequently Asked Questions</h1>
           
         </div>
         
-        <div className="flex-grow py-16 bg-black/50 md:flex-2 md:pl-8">
+        <div className="flex-grow py-16 md:bg-black/50 md:flex-2 p-4 md:pl-8">
           <Accordion type="single" collapsible className="w-full max-w-3xl">
             <AccordionItem value="item-1" className="border-b  border-gray-700">
-              <AccordionTrigger className="text-white text-xl py-4 hover:text-yellow-500 ">
+              <AccordionTrigger className="text-white md:text-xl px-4 py-3 text-md hover:text-yellow-500 ">
                 When and where is the fest taking place?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300 pb-4">
@@ -172,7 +260,7 @@ const HomePage = () => {
             </AccordionItem>
             
             <AccordionItem value="item-2" className="border-b border-gray-700">
-              <AccordionTrigger className="text-white text-xl py-4 hover:text-yellow-500">
+              <AccordionTrigger className="text-white md:text-xl px-4 py-3 text-md hover:text-yellow-500">
                 How can I register for the competitions?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300 pb-4">
@@ -181,34 +269,27 @@ const HomePage = () => {
             </AccordionItem>
             
             <AccordionItem value="item-3" className="border-b border-gray-700">
-              <AccordionTrigger className="text-white text-xl py-4 hover:text-yellow-500 ">
+              <AccordionTrigger className="text-white md:text-xl px-4 py-3 text-md hover:text-yellow-500">
                 Is there an entry fee for the fest?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300 pb-4">
-                General entry to the fest is free for all students with a valid college ID. However, some workshops and premium events may have a nominal fee. Detailed pricing information is available on our website under the "Tickets" section.
+                General entry to the fest is free for all students with a valid college ID and ticket. Some workshops and events may have a nominal fee.
               </AccordionContent>
             </AccordionItem>
             
-            <AccordionItem value="item-4" className="border-b border-gray-700">
-              <AccordionTrigger className="text-white text-xl py-4 hover:text-yellow-500">
-                Will there be accommodation for outstation participants?
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-300 pb-4">
-                Yes, we provide accommodation for outstation participants at a nominal fee. Accommodation requests must be made at least 10 days before the event through our website. Limited spots are available, so early booking is recommended.
-              </AccordionContent>
-            </AccordionItem>
+            
             
             <AccordionItem value="item-5" className="border-b border-gray-700">
-              <AccordionTrigger className="text-white text-xl py-4 hover:text-yellow-500 ">
+              <AccordionTrigger className="text-white md:text-xl px-4 py-3 text-md hover:text-yellow-500">
                 Who are the celebrity performers this year?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300 pb-4">
-                We're excited to have some amazing performers this year! The complete lineup will be announced on our social media channels two weeks before the event. Follow us on Instagram and Twitter to stay updated with all the announcements.
+                We're excited to have some amazing performers this year! The complete lineup will be announced on our social media channels few days before the event. Follow us on Instagram and Twitter to stay updated with all the announcements.
               </AccordionContent>
             </AccordionItem>
             
             <AccordionItem value="item-6" className="border-b border-gray-700">
-              <AccordionTrigger className="text-white text-xl py-4 hover:text-yellow-500 ">
+              <AccordionTrigger className="text-white md:text-xl px-4 py-3 text-md hover:text-yellow-500">
                 Can non-students attend the fest?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300 pb-4">
@@ -217,7 +298,7 @@ const HomePage = () => {
             </AccordionItem>
             
             <AccordionItem value="item-7" className="border-b border-gray-700">
-              <AccordionTrigger className="text-white text-xl py-4 hover:text-yellow-500 ">
+              <AccordionTrigger className="text-white md:text-xl px-4 py-3 text-md hover:text-yellow-500">
                 How can I volunteer for the fest?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300 pb-4">
@@ -228,7 +309,6 @@ const HomePage = () => {
         </div>
       </div>
       </div>
-    </div>
     </div>
     </div>
     

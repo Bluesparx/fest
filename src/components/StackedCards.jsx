@@ -6,30 +6,86 @@ const StackedCards = ({ events = [], layout = "slide" }) => {
   const containerRef = useRef(null);
   const [maxHeight, setMaxHeight] = useState(0);
   const [touchStart, setTouchStart] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+  const autoScrollRef = useRef(null);
 
   useEffect(() => {
     const calculateMaxHeight = () => {
       if (containerRef.current) {
-        const cardElements = containerRef.current.querySelectorAll(".card-item");
-        let max = 0;
-        cardElements.forEach(card => {
-          if (card.scrollHeight > max) max = card.scrollHeight;
-        });
-        setMaxHeight(max > 0 ? max : 400); // Fallback height
+        if (!isMobile) { 
+          setMaxHeight(500); 
+        } else {
+          setMaxHeight(340); 
+        }
       }
+    };
+
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
     };
     
     setTimeout(calculateMaxHeight, 100);
     window.addEventListener("resize", calculateMaxHeight);
     
-    return () => window.removeEventListener("resize", calculateMaxHeight);
+    // Initial check and add listener for responsive behavior
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    
+    return () => {
+      window.removeEventListener("resize", calculateMaxHeight);
+      window.removeEventListener("resize", checkMobile);
+    };
   }, [events]);
 
+  // Auto-scroll effect
+  useEffect(() => {
+    const startAutoScroll = () => {
+      autoScrollRef.current = setInterval(() => {
+        setActiveIndex(prevIndex => {
+          // Move to the next card or loop back to the first
+          return prevIndex === events.length - 1 ? 0 : prevIndex + 1;
+        });
+      }, 3000); // 3 seconds interval
+    };
+
+    // Start auto-scroll
+    startAutoScroll();
+
+    // Cleanup function
+    return () => {
+      if (autoScrollRef.current) {
+        clearInterval(autoScrollRef.current);
+      }
+    };
+  }, [events.length]);
+
+  // Reset auto-scroll when user interacts
+  const resetAutoScroll = () => {
+    if (autoScrollRef.current) {
+      clearInterval(autoScrollRef.current);
+      
+      // Restart auto-scroll after user interaction
+      autoScrollRef.current = setInterval(() => {
+        setActiveIndex(prevIndex => {
+          return prevIndex === events.length - 1 ? 0 : prevIndex + 1;
+        });
+      }, 3000);
+    }
+  };
+
   const handleCardClick = (index) => {
-    setActiveIndex(index);
+    resetAutoScroll(); // Reset auto-scroll timer
+
+    if (index === activeIndex) {
+      window.location.href = events[index].registerLink;
+    } else {
+      setActiveIndex(index);
+    }
   };
 
   const handleTouchStart = (e) => {
+    resetAutoScroll(); // Reset auto-scroll timer
+    
     setTouchStart({
       x: e.touches[0].clientX,
       y: e.touches[0].clientY,
@@ -84,19 +140,17 @@ const StackedCards = ({ events = [], layout = "slide" }) => {
       scale = Math.max(scale, 0.7); // Don't go below 0.7 scale
       
       if (layout === "slide") {
-        // Position cards to the left or right
-        translateX = position * -25; // Percentage offset
+       translateX = position * 25;
         rotate = 0;
       } else if (layout === "fanOut") {
-        // Fan out cards with rotation
-        translateX = position * -20;
-        rotate = position * 10; // Degrees of rotation
+        translateX = position * 30;
+        rotate = position * 10;
       }
     }
     
     return {
       zIndex,
-      transform: `translateX(${translateX}%) scale(${scale}) rotate(${-rotate}deg)`,
+      transform: `translateX(${translateX}%) scale(${scale}) rotate(${rotate}deg)`,
     };
   };
 
@@ -108,11 +162,11 @@ const StackedCards = ({ events = [], layout = "slide" }) => {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      <ul className="relative md:w-1/3 w-4/5 mx-auto p-0">
+      <ul className="relative md:w-2/5 w-2/3 mx-auto p-0">
         {events.map((event, index) => (
           <motion.li
-            key={event.id}
-            className={`card-item cursor-pointer rounded-lg shadow-md list-none md:w-4/5 w-3/4 absolute left-1/2 transform -translate-x-1/2 ${
+            key={event.id || index}
+            className={`card-item cursor-pointer rounded-lg shadow-md list-none md:w-4/5 w-full absolute left-1/2 transform -translate-x-1/2 ${
               index === activeIndex ? "active shadow-lg z-50" : ""
             }`}
             style={{
@@ -125,16 +179,15 @@ const StackedCards = ({ events = [], layout = "slide" }) => {
               zIndex: index === activeIndex ? events.length + 1 : events.length - Math.abs(index - activeIndex)
             }}
           >
-            <div className="relative block w-full h-full bg-[#E6E6FA] p-6 rounded-lg z-10 flex flex-col">
-              <div className="w-full overflow-hidden rounded-lg mb-4">
+            <div className="relative block w-full h-full bg-gray-900 p-1 rounded-lg z-10 flex flex-col">
+              <div className="w-full h-full overflow-hidden rounded-lg">
                 <img 
                   src={event.image} 
-                  alt={event.title} 
-                  className="w-full h-40 object-cover"
+                  alt="Event" 
+                  className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-xl font-bold mb-1">{event.title}</h3>
-              <p className="text-gray-600">{event.description}</p>
+            
             </div>
             {index !== activeIndex && (
               <div 
@@ -153,7 +206,10 @@ const StackedCards = ({ events = [], layout = "slide" }) => {
             className={`w-3 h-[10px] rounded-full ${
               index === activeIndex ? "bg-blue-500" : "bg-gray-300"
             }`}
-            onClick={() => handleCardClick(index)}
+            onClick={() => {
+              resetAutoScroll();
+              setActiveIndex(index);
+            }}
           />
         ))}
       </div>

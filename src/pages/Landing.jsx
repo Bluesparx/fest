@@ -121,13 +121,10 @@ const HomePage = () => {
                   </div>
 
           <img
-            src="/title.png"
+            src="/edited_logo.png"
             alt="Title"
             className="md:w-[40%] w-[80%] h-auto mb-4 mx-auto "
           />
-          <p className="text-xl font-imenglish text-gray-300 mb-8 max-w-lg mx-auto">
-            28-29 March '25
-          </p>
         </div>
 
           <div className="absolute bottom-[-60%] w-[80vw] bg-yellow-300 rounded-full opacity-10 blur-xl"></div>

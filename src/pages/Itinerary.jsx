@@ -2,7 +2,6 @@ import Footer from "@/components/Footer";
 import HorizontalTimeline from "@/components/ui/Timeline";
 import VerticalTimeline from "@/components/ui/VerticalTimeline";
 import React from "react";
-
 const day1Events = [
   { time: "11-1 PM", title: "Miss & Mr. Taarangana", description: "An exciting talent showcase.", image: "/event-poster.png"},
   { time: "11-1 PM", title: "Urban Thump", description: "Feel the rhythm of the street.", image: "/event-poster.png" },

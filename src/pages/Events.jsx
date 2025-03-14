@@ -3,20 +3,18 @@ import StackedCards from "@/components/StackedCards";
 import Footer from "@/components/Footer";
 
 const day1Events = [
-  { time: "Bollywood Masquerade", title: "Bollywood Masquerade", description: "A grand masquerade ball.", image: "/event-poster.png" },
-  
-  { time: "Singer Performance", title: "Singer Performance", description: "Live vocal performance.", image: "/event-poster.png" },
-  { time: "time", title: "Kaun Banega Bollywood Pati", description: "A fun Bollywood-themed game show.", image: "/event-poster.png" },
-  { time: "time", title: "Urban Thump", description: "Feel the rhythm of the street.", image: "/event-poster.png" },
-  { time: "time", title: "Aaghaz", description: "A mesmerizing opening performance.", image: "/event-poster.png" },
-  { time: "time", title: "Alaap", description: "Soulful musical experience.", image: "/event-poster.png" },
-  { time: "time", title: "Jashn E Alfaz", description: "Poetry and spoken word magic.", image: "/event-poster.png" },
-  { time: "11:00 am", title: "Miss & Mr. Taarangana", description: "An exciting talent showcase.", image: "/event-poster.png" },
-  
+  { image: "/events/alaap.png", registerLink: "https://unstop.com" },
+  { image: "/events/lilac.png", registerLink: "https://unstop.com" },
+  { image: "/event-poster.png", registerLink: "https://unstop.com" },
+  { image: "/event-poster.png", registerLink: "https://unstop.com" },
+  { image: "/event-poster.png", registerLink: "https://unstop.com" },
+  { image: "/event-poster.png", registerLink: "https://unstop.com" },
+  { image: "/event-poster.png", registerLink: "https://unstop.com" },
+  { image: "/event-poster.png", registerLink: "https://unstop.com" },
 ];
 
 const day2Events = [
-  { time: "Filler Event", title: "Filler Event", description: "A surprise entertainment segment.", image: "/event-poster.png" },
+  { time: "Surprise Event", description: "A surprise entertainment segment.", image: "/event-poster.png" },
   { time: "Artist Performance", title: "Artist Performance", description: "A spectacular artist showcase.", image: "/event-poster.png" },
   { time: "Solo Dance Competition", title: "Solo Dance Competition", description: "Incredible solo dance performances.", image: "/event-poster.png" },
   { time: "Rang Manch / Solo Acting", title: "Rang Manch / Solo Acting", description: "Drama and expressions on stage.", image: "/event-poster.png" },
@@ -40,11 +38,11 @@ const EventsPage = () => {
           {/* Day 1 Events */}
           <h2 className="text-3xl font-imenglish font-bold text-white my-8 text-center ">Day 1</h2>
           
-          <StackedCards events={day1Events} layout={window.innerWidth < 840 ? "slide" : "fanOut"} />
+          <StackedCards events={day1Events} layout={window.innerWidth < 440 ? "slide" : "fanOut"} />
 
           {/* Day 2 Events */}
           <h2 className="text-3xl font-imenglish font-bold text-white mb-8  text-center ">Day 2</h2>
-          <StackedCards events={day2Events} layout={window.innerWidth < 840 ? "slide" : "fanOut"} />
+          <StackedCards events={day2Events} layout={window.innerWidth < 440 ? "slide" : "fanOut"} />
         </div>
       </div>
     </div>

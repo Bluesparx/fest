@@ -156,19 +156,17 @@ const HomePage = () => {
       >
         <div className="flex flex-col justify-center items-center h-[70vh]">
           <img
-            src="/title.png"
+            src="/edited_logo.png"
             alt="Title"
             className="w-[40%] h-auto mb-4"
           />
-          <p className="text-xl font-imenglish text-gray-300 mb-8 max-w-lg mx-auto">
-            28-29 March '25
-          </p>
+          
         </div>
 
         <div className="carousel absolute bottom-2 w-[35vw] left-1/2 transform -translate-x-1/2 flex justify-center items-center">
           <div className="absolute bottom-[-60%] w-[30vw] bg-yellow-300 rounded-full opacity-10 blur-xl"></div>
           <div className="relative flex justify-center items-center">
-            <motion.img
+            {/* <motion.img
               src="/caricatures/1.png"
               className="carousel-item"
               style={{ width: "45%", height: "auto", marginBottom: "-3rem" }}
@@ -179,11 +177,11 @@ const HomePage = () => {
                 repeatType: "reverse",
                 ease: "easeInOut",
               }}
-            />
+            /> */}
             <motion.img
               src="/posters/truck.png"
               className="carousel-item"
-              style={{ width: "auto", height: "100%", marginBottom: "6rem" }}
+              style={{ width: "auto", height: "100%", marginBottom: "3vh" }}
               animate={{ scale: [1.1, 1.18, 1.1] }}
               transition={{
                 duration: 4.5,
@@ -193,7 +191,7 @@ const HomePage = () => {
                 delay: 0.7,
               }}
             />
-            <motion.img
+            {/* <motion.img
               src="/caricatures/5.png"
               className="carousel-item"
               style={{ width: "40%", height: "auto", marginBottom: "-2rem" }}
@@ -204,7 +202,7 @@ const HomePage = () => {
                 repeatType: "reverse",
                 ease: "easeInOut",
               }}
-            />
+            /> */}
           </div>
         </div> 
         </div>
@@ -215,7 +213,7 @@ const HomePage = () => {
       </div>
 
       <div
-        className="md:h-[80vh] h-[100vh] bg-yellow-600 flex justify-center items-center bg-cover bg-center"
+        className="md:h-[100vh] bg-yellow-600 flex justify-center items-center bg-cover bg-center"
         style={{ backgroundImage: "url('image.png')" }}
       >
         <div className="text-center  md:w-[60vw] bg-black/40 p-8 md:rounded-lg backdrop-blur-xl">
@@ -232,11 +230,11 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="bg-black md:h-[150vh] h-[100vh] flex flex-col  align-center justify-center text-white py-20">
+      <div className="bg-black h-[100vh] flex flex-col  align-center justify-center text-white py-20">
         
       <h2 className="font-imenglish text-5xl text-center py-10">Unforgettable Performances</h2>
         
-        <img src="/Throwback-Taarangana.png"/>
+        {/* <img src="/Throwback-Taarangana.png"/> */}
         <div>
           <Gallery />
           </div>

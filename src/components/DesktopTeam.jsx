@@ -16,7 +16,7 @@ const teamMembers = [
     name: "Rishita Makde",
     position: "Vice President",
     phone: "+91 9821702730",
-    email: "vicepresident.ucc.igdtuw@gmail.com ",
+    email: "vicepresident.ucc.igdtuw@gmail.com",
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ const teamMembers = [
     name: "Devika Sharma",
     position: "Public Relations Officer (PRO)",
     phone: "+91 9205868389",
-    email: "profficer.ucc.igdtuw@gmail.com ",
+    email: "profficer.ucc.igdtuw@gmail.com",
   },
   {
     id: 6,
@@ -85,51 +85,56 @@ const DesktopTeam = () => {
 
             {/* Team Members Scrolling Section */}
             <div className="relative w-[85vw] md:w-[80vw] mx-auto overflow-hidden">
-              <div className="flex animate-marquee gap-x-6">
-                {teamMembers.concat(teamMembers).map((member, index) => (
-                  <div
-                    key={index}
-                    className="pl-4 md:basis-1/3 lg:basis-1/4 flex flex-col items-center"
-                  >
-                    <div className="w-64 h-72 md:w-72 md:h-80 lg:w-80 lg:h-96 bg-black/50 backdrop-blur-md rounded-lg flex flex-col items-center justify-center shadow-lg p-4">
-                      {/* Profile Image */}
-                      <div className="w-44 h-44 md:w-52 md:h-52 lg:w-56 lg:h-56 overflow-hidden rounded-full border-4 border-yellow-400">
-                        <img
-                          src={member.image}
-                          alt={member.name}
-                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                        />
-                      </div>
+              <div
+                className="flex animate-marquee gap-x-6 min-w-fit"
+                style={{ animationDuration: "100s" }} // Slowed down animation
+              >
+                {teamMembers
+                  .concat(teamMembers, teamMembers) // Duplicated for smooth looping
+                  .map((member, index) => (
+                    <div
+                      key={index}
+                      className="pl-4 md:basis-1/3 lg:basis-1/4 flex flex-col items-center"
+                    >
+                      <div className="w-64 h-72 md:w-72 md:h-80 lg:w-80 lg:h-96 bg-black/50 backdrop-blur-md rounded-lg flex flex-col items-center justify-center shadow-lg p-4">
+                        {/* Profile Image */}
+                        <div className="w-44 h-44 md:w-52 md:h-52 lg:w-56 lg:h-56 overflow-hidden rounded-full border-4 border-yellow-400">
+                          <img
+                            src={member.image}
+                            alt={member.name}
+                            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                          />
+                        </div>
 
-                      {/* Name & Position */}
-                      <h3 className="mt-4 text-xl lg:text-2xl font-bold text-center font-imenglish text-white">
-                        {member.name}
-                      </h3>
-                      <p className="text-sm lg:text-lg text-gray-300 font-playful">
-                        {member.position}
-                      </p>
+                        {/* Name & Position */}
+                        <h3 className="mt-4 text-xl lg:text-2xl font-bold text-center font-imenglish text-white">
+                          {member.name}
+                        </h3>
+                        <p className="text-sm lg:text-lg text-gray-300 font-playful">
+                          {member.position}
+                        </p>
 
-                      {/* Contact Icons */}
-                      <div className="flex items-center gap-4 mt-2 text-gray-200">
-                        {/* Phone Icon */}
-                        <a
-                          href={`tel:${member.phone}`}
-                          className="hover:text-yellow-400"
-                        >
-                          <Phone size={22} />
-                        </a>
+                        {/* Contact Icons */}
+                        <div className="flex items-center gap-4 mt-2 text-gray-200">
+                          {/* Phone Icon */}
+                          <a
+                            href={`tel:${member.phone}`}
+                            className="hover:text-yellow-400"
+                          >
+                            <Phone size={22} />
+                          </a>
 
-                        {/* Email Icon */}
-                        <a
-                          href={`mailto:${member.email}`}
-                          className="hover:text-yellow-400"
-                        >
-                          <Mail size={22} />
-                        </a>
+                          {/* Email Icon */}
+                          <a
+                            href={`mailto:${member.email}`}
+                            className="hover:text-yellow-400"
+                          >
+                            <Mail size={22} />
+                          </a>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
               </div>
             </div>
           </div>

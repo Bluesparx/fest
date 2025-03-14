@@ -2,13 +2,13 @@ import React, { useState, useEffect, useRef } from "react";
 
 const Gallery = () => {
   const images = [
-    { id: 1, src: "/gallery/1.jpg", alt: "Gallery image 1", title: "Event 2024", rotation: -2, marginTop: "10px" },
-    { id: 2, src: "/gallery/2.png", alt: "Gallery image 2", title: "Performance", rotation: 3, marginTop: "20px" },
-    { id: 3, src: "/gallery/3.png", alt: "Gallery image 3", title: "Workshop", rotation: -1, marginTop: "5px" },
-    { id: 4, src: "/gallery/4.png", alt: "Gallery image 4", title: "Competition", rotation: 2, marginTop: "15px" },
-    { id: 5, src: "/gallery/5.jpg", alt: "Gallery image 5", title: "Cultural Night", rotation: -3, marginTop: "8px" },
-    { id: 6, src: "/gallery/6.jpg", alt: "Gallery image 6", title: "Tech Exhibition", rotation: 1, marginTop: "12px" },
-    { id: 7, src: "/gallery/7.jpg", alt: "Gallery image 7", title: "Tech Exhibition", rotation: 1, marginTop: "12px" },
+    { id: 1, src: "/gallery/1.png", alt: "Gallery image 1", title: "Lilac Dreams", rotation: -2, marginTop: "10px" },
+    { id: 2, src: "/gallery/2.png", alt: "Gallery image 2", title: "Fun Events", rotation: 3, marginTop: "20px" },
+    { id: 3, src: "/gallery/3.png", alt: "Gallery image 3", title: "Pronite - Shaan", rotation: -1, marginTop: "5px" },
+    { id: 4, src: "/gallery/4.jpg", alt: "Gallery image 4", title: "Alaap", rotation: 2, marginTop: "15px" },
+    { id: 5, src: "/gallery/5.jpg", alt: "Gallery image 5", title: "DJ Night", rotation: -3, marginTop: "8px" },
+    { id: 6, src: "/gallery/6.jpg", alt: "Gallery image 6", title: "Rap Battle", rotation: 1, marginTop: "12px" },
+    { id: 7, src: "/gallery/7.jpg", alt: "Gallery image 7", title: "Navjot Ahuja", rotation: 1, marginTop: "12px" },
   ];
   const [position, setPosition] = useState(0);
   const [touchStartX, setTouchStartX] = useState(0);

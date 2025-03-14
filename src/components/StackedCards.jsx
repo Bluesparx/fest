@@ -102,17 +102,17 @@ const StackedCards = ({ events = [], layout = "slide" }) => {
 
   return (
     <div 
-      className="relative w-[80vw] mx-auto mb-16 overflow-hidden"
+      className="relative md:w-[80vw] w-[100vw] mx-auto mb-16 overflow-hidden"
       style={{ height: `${maxHeight + 180}px` }} 
       ref={containerRef}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      <ul className="relative w-1/3 mx-auto p-0">
+      <ul className="relative md:w-1/3 w-4/5 mx-auto p-0">
         {events.map((event, index) => (
           <motion.li
             key={event.id}
-            className={`card-item cursor-pointer rounded-lg shadow-md list-none w-4/5 absolute left-1/2 transform -translate-x-1/2 ${
+            className={`card-item cursor-pointer rounded-lg shadow-md list-none md:w-4/5 w-3/4 absolute left-1/2 transform -translate-x-1/2 ${
               index === activeIndex ? "active shadow-lg z-50" : ""
             }`}
             style={{
@@ -125,7 +125,7 @@ const StackedCards = ({ events = [], layout = "slide" }) => {
               zIndex: index === activeIndex ? events.length + 1 : events.length - Math.abs(index - activeIndex)
             }}
           >
-            <div className="relative block w-full h-full bg-white p-6 rounded-lg z-10 flex flex-col">
+            <div className="relative block w-full h-full bg-[#E6E6FA] p-6 rounded-lg z-10 flex flex-col">
               <div className="w-full overflow-hidden rounded-lg mb-4">
                 <img 
                   src={event.image} 

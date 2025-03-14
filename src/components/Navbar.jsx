@@ -36,7 +36,7 @@ const Navbar = () => {
       
       <div className={`md:hidden flex justify-between items-center px-4 py-3 bg-black/50 backdrop-blur-sm ${!visible && !isMenuOpen ? 'hidden' : ''}`}>
         <Link to="/" className="font-imenglish text-lg text-red-700 font-medium">
-        <img src="/title.png" alt="Logo" className="h-8" />
+        <img src="/logo.jpg" alt="Logo" className="h-10" />
         </Link>
          <button 
           className="text-red-700 focus:outline-none bg-none" 

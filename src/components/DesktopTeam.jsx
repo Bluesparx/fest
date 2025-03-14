@@ -12,11 +12,11 @@ const teamMembers = [
   },
   {
     id: 2,
-    image: "/posters/demo.png",
+    image: "/team/rishita.jpg",
     name: "Rishita Makde",
     position: "Vice President",
-    phone: "+91 9123456789",
-    email: "rishita@example.com",
+    phone: "+91 9821702730",
+    email: "vicepresident.ucc.igdtuw@gmail.com ",
   },
   {
     id: 3,
@@ -36,11 +36,11 @@ const teamMembers = [
   },
   {
     id: 5,
-    image: "/posters/demo.png",
+    image: "/team/devika.jpg",
     name: "Devika Sharma",
     position: "Public Relations Officer (PRO)",
-    phone: "+91 7766554433",
-    email: "devika@example.com",
+    phone: "+91 9205868389",
+    email: "profficer.ucc.igdtuw@gmail.com ",
   },
   {
     id: 6,
@@ -72,7 +72,7 @@ const DesktopTeam = () => {
               alt="Team"
               className="absolute inset-0 w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/40"></div>
+            <div className="absolute inset-0 bg-black/60"></div>
           </div>
 
           {/* Header */}

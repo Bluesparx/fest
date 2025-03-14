@@ -2,34 +2,31 @@ import Footer from "@/components/Footer";
 import HorizontalTimeline from "@/components/ui/Timeline";
 import VerticalTimeline from "@/components/ui/VerticalTimeline";
 import React from "react";
-
 const day1Events = [
-  { time: "11:00 am", title: "Miss & Mr. Taarangana", description: "An exciting talent showcase.", image: "/event-poster.png"},
-  { time: "time", title: "Urban Thump", description: "Feel the rhythm of the street.", image: "/event-poster.png" },
-  { time: "time", title: "Aaghaz", description: "A mesmerizing opening performance." , image: "/event-poster.png"},
-  { time: "time", title: "Alaap", description: "Soulful musical experience.", image: "/event-poster.png" },
-  
+  { time: "11:00 am", title: "Miss & Mr. Taarangana", description: "An exciting talent showcase.", image: "/event-poster.png" },
+  { time: "01:00 pm", title: "Urban Thump", description: "Feel the rhythm of the street.", image: "/event-poster.png" },
+  { time: "02:30 pm", title: "Aaghaz", description: "A mesmerizing opening performance.", image: "/event-poster.png" },
+  { time: "04:00 pm", title: "Alaap", description: "Soulful musical experience.", image: "/event-poster.png" },
 ];
 
 const day1EventsPart2 = [
-  { time: "time", title: "Jashn E Alfaz", description: "Poetry and spoken word magic.", image: "/event-poster.png" },
-  { time: "time", title: "Kaun Banega Bollywood Pati", description: "A fun Bollywood-themed game show." , image: "/event-poster.png"},
-  { time: "Singer Performance", title: "Singer Performance", description: "Live vocal performance.", image: "/event-poster.png" },
-  { time: "Bollywood Masquerade", title: "Bollywood Masquerade", description: "A grand masquerade ball.", image: "/event-poster.png" },
+  { time: "05:30 pm", title: "Jashn E Alfaz", description: "Poetry and spoken word magic.", image: "/event-poster.png" },
+  { time: "07:00 pm", title: "Kaun Banega Bollywood Pati", description: "A fun Bollywood-themed game show.", image: "/event-poster.png" },
+  { time: "08:30 pm", title: "Singer Performance", description: "Live vocal performance.", image: "/event-poster.png" },
+  { time: "10:00 pm", title: "Bollywood Masquerade", description: "A grand masquerade ball.", image: "/event-poster.png" },
 ];
 
 const day2Events = [
-  { time: "Lilac Dreams", title: "Lilac Dreams", description: "A dreamy stage performance.", image: "/event-poster.png" },
-  { time: "Lyrical Showdown / Rap Battle", title: "Lyrical Showdown / Rap Battle", description: "Rap battles with intense wordplay.", image: "/event-poster.png" },
-  { time: "Antra / Group Singing", title: "Antra / Group Singing", description: "Soulful melodies from groups.", image: "/event-poster.png" },
-  { time: "Rang Manch / Solo Acting", title: "Rang Manch / Solo Acting", description: "Drama and expressions on stage.", image: "/event-poster.png" },
-  
+  { time: "11:00 am", title: "Lilac Dreams", description: "A dreamy stage performance.", image: "/event-poster.png" },
+  { time: "01:00 pm", title: "Lyrical Showdown / Rap Battle", description: "Rap battles with intense wordplay.", image: "/event-poster.png" },
+  { time: "03:00 pm", title: "Antra / Group Singing", description: "Soulful melodies from groups.", image: "/event-poster.png" },
+  { time: "04:30 pm", title: "Rang Manch / Solo Acting", description: "Drama and expressions on stage.", image: "/event-poster.png" },
 ];
 
 const day2EventsPart2 = [
-  { time: "Solo Dance Competition", title: "Solo Dance Competition", description: "Incredible solo dance performances.", image: "/event-poster.png" },
-  { time: "Artist Performance", title: "Artist Performance", description: "A spectacular artist showcase.", image: "/event-poster.png" },
-  { time: "Filler Event", title: "Filler Event", description: "A surprise entertainment segment.", image: "/event-poster.png" },
+  { time: "06:00 pm", title: "Solo Dance Competition", description: "Incredible solo dance performances.", image: "/event-poster.png" },
+  { time: "07:30 pm", title: "Artist Performance", description: "A spectacular artist showcase.", image: "/event-poster.png" },
+  { time: "09:00 pm", title: "Filler Event", description: "A surprise entertainment segment.", image: "/event-poster.png" },
 ];
 
 const Itinerary = () => {

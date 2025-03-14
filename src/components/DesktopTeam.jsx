@@ -44,7 +44,7 @@ const teamMembers = [
   },
   {
     id: 6,
-    image: "/team/sakshi.jpg",
+    image: "/team/sakshi.png",
     name: "Sakshi Shroff",
     position: "Event Co-ordinator",
     phone: "+91 7596814605",

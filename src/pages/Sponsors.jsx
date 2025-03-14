@@ -27,25 +27,25 @@ const sponsors = {
 const SponsorCard = ({ sponsor }) => (
   <Card className="bg-black/80 border border-yellow-600/40 shadow-md shadow-yellow-600/20 transition-all duration-300">
     <CardContent className="p-4 flex flex-col items-center">
-      <div className="mb-3 p-2 bg-white/10 rounded-lg flex items-center justify-center w-36 h-36">
+      <div className="mb-3 p-2 bg-white/10 rounded-lg flex items-center justify-center w-28 h-28 sm:w-36 sm:h-36">
         <img 
           src={sponsor.logo} 
           alt={`${sponsor.name} logo`} 
-          className="w-32 h-32 object-contain" 
+          className="w-24 h-24 sm:w-32 sm:h-32 object-contain" 
         />
       </div>
-      <h3 className="text-lg font-bold text-center font-imenglish">{sponsor.name}</h3>
-      <p className="text-gray-400 text-sm text-center mt-1">{sponsor.caption}</p>
+      <h3 className="text-base sm:text-lg font-bold text-center font-imenglish">{sponsor.name}</h3>
+      <p className="text-gray-400 text-xs sm:text-sm text-center mt-1">{sponsor.caption}</p>
     </CardContent>
   </Card>
 );
 
 const SponsorSection = ({ title, sponsors, isTitle = false }) => (
-  <div className="mb-16">
-    <h2 className="text-2xl font-imenglish font-semibold mb-8 text-center uppercase tracking-wider">
+  <div className="mb-12 sm:mb-16 px-4">
+    <h2 className="text-xl sm:text-2xl font-imenglish font-semibold mb-6 sm:mb-8 text-center uppercase tracking-wider text-white">
       {title}
     </h2>
-    <div className={`grid ${isTitle ? 'md:w-[60vw] mx-auto md:grid-cols-3' : 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4'} m-4 gap-6 justify-evenly justify-center `}>
+    <div className={` text-white grid grid-cols-1 ${isTitle ? 'sm:grid-cols-2 md:w-[60vw] mx-auto md:grid-cols-3' : 'sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'} gap-4 sm:gap-6 justify-center`}> 
       {sponsors.map(sponsor => (
         <SponsorCard key={sponsor.id} sponsor={sponsor} />
       ))}
@@ -56,31 +56,27 @@ const SponsorSection = ({ title, sponsors, isTitle = false }) => (
 const SponsorsPage = () => {
   return (
     <>
-    <div className="relative overflow-x-hidden z-20 min-h-screen bg-[#6d0203] overflow-hidden ">
-    <div className=" top-0 z-10 w-[100vw] min-h-screen justify-center flex items-center flex-col bg-black/10">
-    
-    <div className="relative  min-h-screen w-[75vw] mt-38 mb-8">
-
-          <SponsorSection 
-            title="Title Sponsors" 
-            sponsors={sponsors.titleSponsors} 
-            isTitle={true} 
-          />
-
-          <SponsorSection 
-            title="Sponsors" 
-            sponsors={sponsors.coSponsors} 
-          />
-
-          <SponsorSection 
-            title="Partners & Supporters" 
-            sponsors={sponsors.otherSponsors} 
-          />
+      <div className="relative overflow-x-hidden z-20 min-h-screen bg-[#6d0203] overflow-hidden ">
+        <div className="top-0 z-10 w-full min-h-screen flex flex-col items-center bg-black/10">
+          <div className="relative min-h-screen w-full sm:w-[75vw] mt-20 sm:mt-38 mb-8 px-4">
+            <SponsorSection 
+              title="Title Sponsors" 
+              sponsors={sponsors.titleSponsors} 
+              isTitle={true} 
+            />
+            <SponsorSection 
+              title="Sponsors" 
+              sponsors={sponsors.coSponsors} 
+            />
+            <SponsorSection 
+              title="Partners & Supporters" 
+              sponsors={sponsors.otherSponsors} 
+            />
+          </div>
         </div>
       </div>
-      </div>
       <Footer/>
-      </>
+    </>
   );
 };
 

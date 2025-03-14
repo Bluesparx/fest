@@ -5,7 +5,7 @@ import { Phone, Mail } from "lucide-react";
 const teamMembers = [
   {
     id: 1,
-    image: "/team/prakriti.jpg",
+    image: "/team/prakriti.png",
     name: "Prakriti Jaiswal",
     position: "President",
     phone: "+91 9717378434",

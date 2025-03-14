@@ -87,7 +87,7 @@ const HomePage = () => {
 
   return (
     <>
-    <div className="relative min-h-screen overflow-hidden ">
+    <div className="relative min-h-screen bg-black overflow-hidden ">
     <div className="relative overflow-x-hidden z-20 min-h-screen">
     <div className="relative overflow-hidden">
     {isSmallScreen ? (
@@ -232,12 +232,15 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="bg-black h-[100vh] flex flex-col md:px-8 align-center justify-center text-white py-20">
+      <div className="bg-black md:h-[150vh] h-[100vh] flex flex-col  align-center justify-center text-white py-20">
         
       <h2 className="font-imenglish text-5xl text-center py-10">Unforgettable Performances</h2>
+        
+        <img src="/Throwback-Taarangana.png"/>
         <div>
           <Gallery />
           </div>
+        
       </div>
 
       <div className="min-h-[70vh]" style={{backgroundImage: `url(/image.png)`, backgroundSize: 'cover', backgroundBlendMode: 'overlay'}}>

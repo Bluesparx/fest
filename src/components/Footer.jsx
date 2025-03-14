@@ -51,13 +51,13 @@ const Footer = () => {
 
       {/* Social Media Links */}
       <div className="flex gap-6 mb-10">
-        <a href="#" className="text-yellow-400 hover:text-yellow-500">
+        <a href="https://www.instagram.com/taarangana/?hl=en" className="text-yellow-400 hover:text-yellow-500">
           <Instagram size={30} />
         </a>
-        <a href="#" className="text-yellow-400 hover:text-yellow-500">
+        <a href="https://x.com/taarangana_?lang=en" className="text-yellow-400 hover:text-yellow-500">
           <Twitter size={30} />
         </a>
-        <a href="#" className="text-yellow-400 hover:text-yellow-500">
+        <a href="https://www.linkedin.com/company/taarangana" className="text-yellow-400 hover:text-yellow-500">
           <Linkedin size={30} />
         </a>
       </div>

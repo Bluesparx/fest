@@ -12,7 +12,7 @@ const teamMembers = [
   },
   {
     id: 2,
-    image: "/posters/demo.png",
+    image: "/team/rishita.jpg",
     name: "Rishita Makde",
     position: "Vice President",
     phone: "+91 9123456789",
@@ -36,7 +36,7 @@ const teamMembers = [
   },
   {
     id: 5,
-    image: "/posters/demo.png",
+    image: "/team/devika.jpg",
     name: "Devika Sharma",
     position: "Public Relations Officer (PRO)",
     phone: "+91 7766554433",

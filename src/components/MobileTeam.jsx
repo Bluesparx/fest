@@ -5,11 +5,11 @@ import { Phone, Mail } from "lucide-react";
 const teamMembers = [
   {
     id: 1,
-    image: "/posters/demo.png",
+    image: "/team/prakriti.jpg",
     name: "Prakriti Jaiswal",
     position: "President",
-    phone: "+91 9876543210",
-    email: "prakriti@example.com",
+    phone: "+91 9717378434",
+    email: "president.ucc.igdtuw@gmail.com",
   },
   {
     id: 2,
@@ -45,11 +45,11 @@ const teamMembers = [
   },
   {
     id: 6,
-    image: "/posters/demo.png",
+    image: "/team/sakshi.jpg",
     name: "Sakshi Shroff",
     position: "Event Co-ordinator",
-    phone: "+91 6677889900",
-    email: "sakshi@example.com",
+    phone: "+91 7596814605",
+    email: "eventcoordinator.ucc.igdtuw@gmail.com",
   },
   {
     id: 7,

@@ -30,7 +30,7 @@ const EventsPage = () => {
   return (
     <>
     <div className="relative overflow-x-hidden z-20 min-h-screen  bg-cover bg-center bg-no-repeat overflow-hidden" style={{ backgroundImage: "url('/events-bg.png')"}}>
-    <div className=" top-0 z-10 w-[100vw] min-h-screen justify-center flex items-center flex-col bg-black/50">
+    <div className=" top-0 z-10 w-[100vw] min-h-screen justify-center flex items-center flex-col bg-black/65">
     
     <div className="relative  min-h-screen ">
           <header className="text-center mt-38">

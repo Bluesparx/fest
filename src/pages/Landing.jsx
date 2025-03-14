@@ -215,7 +215,7 @@ const HomePage = () => {
       </div>
 
       <div
-        className="md:h-[80vh] h-[100vh] bg-yellow-600 flex justify-center items-center bg-cover bg-center"
+        className="md:h-[100vh] bg-yellow-600 flex justify-center items-center bg-cover bg-center"
         style={{ backgroundImage: "url('image.png')" }}
       >
         <div className="text-center  md:w-[60vw] bg-black/40 p-8 md:rounded-lg backdrop-blur-xl">
@@ -232,7 +232,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="bg-black md:h-[150vh] h-[100vh] flex flex-col  align-center justify-center text-white py-20">
+      <div className="bg-black lg:h-[150vh] md:h-[150vh] h-[100vh] flex flex-col  align-center justify-center text-white py-20">
         
       <h2 className="font-imenglish text-5xl text-center py-10">Unforgettable Performances</h2>
         

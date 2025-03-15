@@ -3,25 +3,23 @@ import StackedCards from "@/components/StackedCards";
 import Footer from "@/components/Footer";
 
 const day1Events = [
-  { image: "/event-poster.png", registerLink: "https://unstop.com/p/miss-mr-taarangana-igdtuw-delhi-1430053" },
-  { image: "/event-poster.png", registerLink: "https://unstop.com/p/urban-thump-igdtuw-delhi-1430091" },
-  { image: "/event-poster.png", registerLink: "https://unstop.com/p/aaghaz-igdtuw-delhi-1430097" },
-  { image: "/events/alaap.png", registerLink: "https://unstop.com/p/alaap-the-solo-singing-competition-taarangana-igdtuw-delhi-1429792" },
-  { image: "/event-poster.png", registerLink: "https://unstop.com/p/jashn-e-alfaz-igdtuw-delhi-1430104" },
-  { image: "/event-poster.png", registerLink: "https://unstop.com" },
-  { image: "/event-poster.png", registerLink: "https://unstop.com" },
-  { image: "/event-poster.png", registerLink: "https://unstop.com" },
+  { image: "/events/item/1.png", registerLink: "https://unstop.com/p/miss-mr-taarangana-igdtuw-delhi-1430053" },
+  { image: "/events/item/2.png", registerLink: "https://unstop.com/p/urban-thump-igdtuw-delhi-1430091" },
+  { image: "/events/item/3.png", registerLink: "https://unstop.com/p/aaghaz-igdtuw-delhi-1430097" },
+  { image: "/events/item/4.png", registerLink: "https://unstop.com/p/alaap-the-solo-singing-competition-taarangana-igdtuw-delhi-1429792" },
+  { image: "/events/item/5.png", registerLink: "https://unstop.com/p/jashn-e-alfaz-igdtuw-delhi-1430104" },
+  { image: "/events/item/6.png", registerLink: "https://unstop.com" },
+
 ]; 
 
 const day2Events = [
-  { image: "/events/lilac.png", registerLink: "" },
-  { image: "/event-poster.png", registerLink: "https://unstop.com/p/urban-thump-igdtuw-delhi-1430091" },
-  { image: "/event-poster.png", registerLink: "https://unstop.com/p/lyrical-showdown-igdtuw-delhi-1430155" },
-  { image: "/event-poster.png", registerLink: "https://unstop.com" },
-  { image: "/event-poster.png", registerLink: "https://unstop.com" },
-  { image: "/event-poster.png", registerLink: "https://unstop.com" },
-  { image: "/event-poster.png", registerLink: "https://unstop.com" },
-  { image: "/event-poster.png", registerLink: "https://unstop.com" },
+  { image: "/events/item/7.png", registerLink: "https://unstop.com/p/lilac-dreams-igdtuw-delhi-1430677" },
+  { image: "/events/item/9.png", registerLink: "https://unstop.com/p/lyrical-showdown-igdtuw-delhi-1430155" },
+  { image: "/events/item/8.png", registerLink: "https://unstop.com/p/antra-group-singing-competition-taarangana25-igdtuw-delhi-1430631" },
+  { image: "/events/item/10.png", registerLink: "https://unstop.com/events/rang-manch-solo-acting-taarangana25-igdtuw-delhi-1430653" },
+  { image: "/events/item/11.png", registerLink: "https://unstop.com/p/tarang-solo-dance-showdown-igdtuw-delhi-1430659" },
+ 
+  
 ]; 
 
 

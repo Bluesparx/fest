@@ -3,7 +3,7 @@ import HorizontalTimeline from "@/components/ui/Timeline";
 import VerticalTimeline from "@/components/ui/VerticalTimeline";
 import React from "react";
 const day1Events = [
-  { time: "11:00-1:00 PM", title: "Miss & Mr. Taarangana", description: "An exciting talent showcase.", image: "/event-poster.png"},
+  { time: "11:00-1:00 PM", title: "Miss & Mr. Taarangana", description: "An exciting talent showcase.", image: "/itidemo.png"},
   { time: "1:00-3:00 PM", title: "Urban Thump", description: "Feel the rhythm of the street.", image: "/event-poster.png" },
   { time: "1:00-3:00 PM", title: "Aaghaz", description: "A mesmerizing opening performance." , image: "/event-poster.png"},
   { time: "11:00-1:00 PM", title: "Alaap", description: "Soulful musical experience.", image: "/event-poster.png" },

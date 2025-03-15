@@ -46,27 +46,29 @@ export default function HorizontalTimeline({ events }) {
               >
                 <motion.div
                   className="absolute w-full h-full transition-transform duration-400"
-                  animate={{ rotateY: flipped[index] ? 180 : 0 }}
                   style={{ transformStyle: "preserve-3d" }}
                 >
-                  {/* Front Side (Image ) */}
+                  {/* Front Side (Image with Overlay) */}
                   <div className="absolute w-full h-full bg-gray-100 rounded-xl shadow-lg flex flex-col justify-center items-center backface-hidden">
                     <img
-                      src={event.image}
+                      src="/itidemo.png"
                       alt={event.title}
                       className="w-full h-full object-cover rounded-xl"
                     />
-                    {/* <p className="absolute bottom-2 bg-black/70 text-white px-3 py-1 rounded-lg text-xs">
-                      Tap to Flip 
-                    </p> */}
+
+                    {/* Overlay Text (Centered on Image) */}
+                    <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-white text-center rounded-xl p-4">
+                      <h2 className="text-lg md:text-xl font-bold">{event.title}</h2>
+                      <p className="text-sm md:text-base mt-1">{event.description}</p>
+                    </div>
                   </div>
 
                   {/* Back Side (Details) */}
-                  <div className="absolute w-full h-full bg-red-900  rounded-xl shadow-lg p-4 flex flex-col justify-center items-center backface-hidden"
+                  {/* <div className="absolute w-full h-full bg-red-900  rounded-xl shadow-lg p-4 flex flex-col justify-center items-center backface-hidden"
                     style={{ transform: "rotateY(180deg)" }}>
                     <h2 className="text-white text-lg font-bold font-imenglish">{event.title}</h2>
                     <p className="text-gray-200 mt-2 text-md font-playful">{event.description}</p>
-                  </div>
+                  </div> */}
                 </motion.div>
               </motion.div>
             </div>

@@ -7,23 +7,25 @@ const day1Events = [
   { image: "/event-poster.png", registerLink: "https://unstop.com/p/urban-thump-igdtuw-delhi-1430091" },
   { image: "/event-poster.png", registerLink: "https://unstop.com/p/aaghaz-igdtuw-delhi-1430097" },
   { image: "/events/alaap.png", registerLink: "https://unstop.com/p/alaap-the-solo-singing-competition-taarangana-igdtuw-delhi-1429792" },
-  { image: "/events/lilac.png", registerLink: "https://unstop.com" },
+  { image: "/event-poster.png", registerLink: "https://unstop.com/p/jashn-e-alfaz-igdtuw-delhi-1430104" },
   { image: "/event-poster.png", registerLink: "https://unstop.com" },
   { image: "/event-poster.png", registerLink: "https://unstop.com" },
   { image: "/event-poster.png", registerLink: "https://unstop.com" },
-  { image: "/event-poster.png", registerLink: "https://unstop.com" },
-];
+]; 
 
 const day2Events = [
-  { time: "Surprise Event", description: "A surprise entertainment segment.", image: "/event-poster.png" },
-  { time: "Artist Performance", title: "Artist Performance", description: "A spectacular artist showcase.", image: "/event-poster.png" },
-  { time: "Solo Dance Competition", title: "Solo Dance Competition", description: "Incredible solo dance performances.", image: "/event-poster.png" },
-  { time: "Rang Manch / Solo Acting", title: "Rang Manch / Solo Acting", description: "Drama and expressions on stage.", image: "/event-poster.png" },
-  { time: "Antra / Group Singing", title: "Antra / Group Singing", description: "Soulful melodies from groups.", image: "/event-poster.png" },
-  { time: "Lyrical Showdown / Rap Battle", title: "Lyrical Showdown / Rap Battle", description: "Rap battles with intense wordplay.", image: "/event-poster.png" },
+  { image: "/events/lilac.png", registerLink: "" },
+  { image: "/event-poster.png", registerLink: "https://unstop.com/p/urban-thump-igdtuw-delhi-1430091" },
+  { image: "/event-poster.png", registerLink: "https://unstop.com/p/lyrical-showdown-igdtuw-delhi-1430155" },
+  { image: "/event-poster.png", registerLink: "https://unstop.com" },
+  { image: "/event-poster.png", registerLink: "https://unstop.com" },
+  { image: "/event-poster.png", registerLink: "https://unstop.com" },
+  { image: "/event-poster.png", registerLink: "https://unstop.com" },
+  { image: "/event-poster.png", registerLink: "https://unstop.com" },
+]; 
 
-  { time: "Lilac Dreams", title: "Lilac Dreams", description: "A dreamy stage performance.", image: "/event-poster.png" },
-];
+
+
 
 const EventsPage = () => {
   return (

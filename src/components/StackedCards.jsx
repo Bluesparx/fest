@@ -15,7 +15,7 @@ const StackedCards = ({ events = [], layout = "slide" }) => {
         if (!isMobile) { 
           setMaxHeight(500); 
         } else {
-          setMaxHeight(280); // Reduced height for mobile
+          setMaxHeight(100); // Reduced height for mobile
         }
       }
     };

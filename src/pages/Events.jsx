@@ -3,10 +3,11 @@ import StackedCards from "@/components/StackedCards";
 import Footer from "@/components/Footer";
 
 const day1Events = [
-  { image: "/events/alaap.png", registerLink: "https://unstop.com" },
+  { image: "/event-poster.png", registerLink: "https://unstop.com/p/miss-mr-taarangana-igdtuw-delhi-1430053" },
+  { image: "/event-poster.png", registerLink: "https://unstop.com/p/urban-thump-igdtuw-delhi-1430091" },
+  { image: "/event-poster.png", registerLink: "https://unstop.com/p/aaghaz-igdtuw-delhi-1430097" },
+  { image: "/events/alaap.png", registerLink: "https://unstop.com/p/alaap-the-solo-singing-competition-taarangana-igdtuw-delhi-1429792" },
   { image: "/events/lilac.png", registerLink: "https://unstop.com" },
-  { image: "/event-poster.png", registerLink: "https://unstop.com" },
-  { image: "/event-poster.png", registerLink: "https://unstop.com" },
   { image: "/event-poster.png", registerLink: "https://unstop.com" },
   { image: "/event-poster.png", registerLink: "https://unstop.com" },
   { image: "/event-poster.png", registerLink: "https://unstop.com" },

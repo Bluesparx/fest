@@ -13,8 +13,8 @@ const day1Events = [
 const day1EventsPart2 = [
   { time: "1:00-3:00 PM", title: "Jashn E Alfaz", description: "Poetry and spoken word magic.", image: "/event-poster.png" },
   { time: "3:00-4:30 PM", title: "Kaun Banega Bollywood Pati", description: "A fun Bollywood-themed game show." , image: "/event-poster.png"},
-  { time: "11:00-1 PM", title: "Singer Performance", description: "Live vocal performance.", image: "/event-poster.png" },
-  { time: "11:00-1 PM", title: "Bollywood Masquerade", description: "A grand masquerade ball.", image: "/event-poster.png" },
+  { time: "11:00-1:00 PM", title: "Singer Performance", description: "Live vocal performance.", image: "/event-poster.png" },
+  { time: "11:00-1:00 PM", title: "Bollywood Masquerade", description: "A grand masquerade ball.", image: "/event-poster.png" },
 ];
 
 const day2Events = [

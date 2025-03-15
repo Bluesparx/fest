@@ -9,11 +9,13 @@ const sponsors = {
     { id: 3, name: "Title comp", logo: "/api/placeholder/140/140", caption: "Title Sponsor" }
   ],
   coSponsors: [
-    { id: 4, name: "co sponsor company ", logo: "/api/placeholder/140/140", caption: "Co Sponsor" },
-    { id: 5, name: "co sponsor company ", logo: "/api/placeholder/140/140", caption: "Associate Sponsor" },
-    { id: 6, name: "co sponsor company ", logo: "/api/placeholder/140/140", caption: "Sponsor" },
-    { id: 7, name: "co sponsor company ", logo: "/api/placeholder/140/140", caption: "Sponsor" }
-  ],
+    { id: 4, name: "Philips", logo: "/sponsors/philips.png", caption: "Sponsor" },
+    { id: 5, name: "ICICI", logo: "/sponsors/icici.png", caption: "Sponsor" },
+    { id: 6, name: "MuscleBlaze", logo: "/sponsors/mb.png", caption: "Sponsor" },
+    { id: 7, name: "Punjab & Sind Bank", logo: "/sponsors/psb.png", caption: "Sponsor"},
+    { id: 8, name: "Slick", logo: "/sponsors/slick.png", caption: "Sponsor"},
+    { id: 9, name: "Top One Percent", logo: "/sponsors/top1.png", caption: "Sponsor"},
+   ],
   otherSponsors: [
     { id: 13, name: "company", logo: "/api/placeholder/140/140", caption: "Community Partner" },
     { id: 14, name: "company", logo: "/api/placeholder/140/140", caption: "Media Partner" },
@@ -59,19 +61,19 @@ const SponsorsPage = () => {
       <div className="relative overflow-x-hidden z-20 min-h-screen bg-[#6d0203] overflow-hidden ">
         <div className="top-0 z-10 w-full min-h-screen flex flex-col items-center bg-black/10">
           <div className="relative min-h-screen w-full sm:w-[75vw] mt-20 sm:mt-38 mb-8 px-4">
-            <SponsorSection 
+            {/* <SponsorSection 
               title="Title Sponsors" 
               sponsors={sponsors.titleSponsors} 
               isTitle={true} 
-            />
+            /> */}
             <SponsorSection 
               title="Sponsors" 
               sponsors={sponsors.coSponsors} 
             />
-            <SponsorSection 
+            {/* <SponsorSection 
               title="Partners & Supporters" 
               sponsors={sponsors.otherSponsors} 
-            />
+            /> */}
           </div>
         </div>
       </div>

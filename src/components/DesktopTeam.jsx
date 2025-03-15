@@ -87,7 +87,7 @@ const DesktopTeam = () => {
             <div className="relative w-[85vw] md:w-[80vw] mx-auto overflow-hidden">
               <div
                 className="flex animate-marquee gap-x-6 min-w-fit"
-                style={{ animationDuration: "100s" }} // Slowed down animation
+                style={{ animationDuration: "550s" }} 
               >
                 {teamMembers
                   .concat(teamMembers, teamMembers) // Duplicated for smooth looping

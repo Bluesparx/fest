@@ -13,7 +13,7 @@ const StackedCards = ({ events = [], layout = "slide" }) => {
     const calculateMaxHeight = () => {
       if (containerRef.current) {
         if (!isMobile) { 
-          setMaxHeight(500); 
+          setMaxHeight(680); 
         } else {
           setMaxHeight(100); // Reduced height for mobile
         }
@@ -105,10 +105,10 @@ const StackedCards = ({ events = [], layout = "slide" }) => {
   return (
     <div 
       className="relative md:w-[80vw] w-[90vw] mx-auto mb-16 overflow-hidden"
-      style={{ height: `${maxHeight + 180}px` }} 
+      style={{ height: `${maxHeight}px` }} 
       ref={containerRef}
     >
-      <ul className="relative md:w-2/5 w-[95%] mx-auto p-0">
+      <ul className="relative md:w-2/5 w-[75%] h-[75%] mx-auto p-0">
         {events.map((event, index) => (
           <motion.li
             key={event.id || index}
@@ -125,7 +125,7 @@ const StackedCards = ({ events = [], layout = "slide" }) => {
               zIndex: index === activeIndex ? events.length + 1 : events.length - Math.abs(index - activeIndex)
             }}
           >
-            <div className="relative block w-full h-full bg-gray-900 p-1 rounded-lg z-10 flex flex-col">
+            <div className="relative block w-full h-3/4 bg-gray-900 p-1 rounded-lg z-10 flex flex-col">
               <div className="w-full h-full overflow-hidden rounded-lg">
                 <img 
                   src={event.image} 

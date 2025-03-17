@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Instagram, Twitter, Facebook, Linkedin } from "lucide-react"; // Importing social media icons
+import ViewCounter from "./ViewCounter";
 
 
 const Footer = () => {
@@ -67,6 +68,7 @@ const Footer = () => {
       <span className="text-gray-100 md:text-xl text-md font-playful mt-1 mb-10">
       Directed and created by <a href="https://www.linkedin.com/in/riddhi-rustagi-9a1976257" className="text-red-400 inline hover:text-red-500">Riddhi</a> and <a href="https://naziahassan.vercel.app" className="text-red-400 hover:text-red-500 inline">Nazia</a> ✨ 
       </span>
+      <ViewCounter />
     </div>
   );
 };

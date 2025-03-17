@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { db } from "../firebaseConfig";
 import { doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
+import { Eye } from "lucide-react";
 
 const ViewCounter = () => {
   const [views, setViews] = useState(0);
@@ -28,8 +29,9 @@ const ViewCounter = () => {
   }, []);
 
   return (
-    <div className="absolute bottom-4 right-4 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-lg">
-      Total Views: {views}
+    <div className="absolute bottom-6 right-6 flex items-center gap-4 bg-gradient-to-r from-yellow-500 to-orange-600 text-white px-3 py-2 rounded-xl shadow-xl animate-fadeIn">
+      <Eye size={25} className="text-white" />
+      <span className="text-xl ">Total Visits:</span><span className="text-xl font-bold"> {views}</span>
     </div>
   );
 };

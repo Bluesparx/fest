@@ -29,10 +29,12 @@ const ViewCounter = () => {
   }, []);
 
   return (
-    <div className="absolute bottom-6 right-6 flex items-center gap-4 bg-gradient-to-r from-yellow-500 to-orange-600 text-white px-3 py-2 rounded-xl shadow-xl animate-fadeIn">
-      <Eye size={25} className="text-white" />
-      <span className="text-xl ">Total Visits:</span><span className="text-xl font-bold"> {views}</span>
-    </div>
+    <div className="fixed bottom-3 right-3 sm:bottom-4 sm:right-4 flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-yellow-500 to-orange-600 text-white px-2 py-1 sm:px-3 sm:py-2 rounded-lg shadow-lg animate-fadeIn">
+    <Eye size={16} className="text-white sm:size-10" />
+    <span className="text-sm sm:text-base">Total Visits:</span>
+    <span className="text-sm sm:text-base font-bold">{views}</span>
+  </div>
+  
   );
 };
 

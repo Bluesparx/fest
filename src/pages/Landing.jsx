@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, useInView} from "framer-motion";
-import Hero from "@/components/Hero";
-import { FocusCardsDemo } from "@/components/FocusCardsDemo";
+import Hero from "@/components/Hero"; 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Footer from "@/components/Footer";
 import Gallery from "@/components/ui/gallery";

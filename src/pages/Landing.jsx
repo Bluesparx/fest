@@ -287,19 +287,19 @@ const HomePage = () => {
             
             <AccordionItem value="item-6" className="border-b border-gray-700">
               <AccordionTrigger className="text-white md:text-xl px-4 py-3 text-md hover:text-yellow-500">
-                Can non-students attend the fest?
+              Who can attend Taarangana?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300 pb-4">
-                Absolutely! While the fest is primarily designed for students, we welcome everyone to attend. Non-students can purchase visitor passes from our website or at the venue entrance. These passes provide access to all general areas and performances.
+              While organized by IGDTUW, Taarangana is open to students from various colleges and universities, fostering a diverse and inclusive environment. 
               </AccordionContent>
             </AccordionItem>
             
             <AccordionItem value="item-7" className="border-b border-gray-700">
               <AccordionTrigger className="text-white md:text-xl px-4 py-3 text-md hover:text-yellow-500">
-                How can I volunteer for the fest?
+              How can one stay updated about Taarangana?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300 pb-4">
-                We're always looking for enthusiastic volunteers! Visit the "Join Us" section on our website and fill out the volunteer application form. Selected volunteers will be contacted by our team and will receive special perks including exclusive merchandise and certificates.
+              Updates are regularly posted on Taarangana's official social media channels.
               </AccordionContent>
             </AccordionItem>
           </Accordion>

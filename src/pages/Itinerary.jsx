@@ -3,32 +3,32 @@ import HorizontalTimeline from "@/components/ui/Timeline";
 import VerticalTimeline from "@/components/ui/VerticalTimeline";
 import React from "react";
 const day1Events = [
-  { time: "11:00-1:00 PM", title: "Miss & Mr. Taarangana", description: "An exciting talent showcase.", image: "/itidemo.png"},
-  { time: "1:00-3:00 PM", title: "Urban Thump", description: "Feel the rhythm of the street.", image: "/event-poster.png" },
-  { time: "1:00-3:00 PM", title: "Aaghaz", description: "A mesmerizing opening performance." , image: "/event-poster.png"},
-  { time: "11:00-1:00 PM", title: "Alaap", description: "Soulful musical experience.", image: "/event-poster.png" },
+  { time: "11:00 AM-1:00 PM", title: "Miss & Mr. Taarangana", description: "An exciting talent showcase.", image: "/itidemo.png", venue:" Main Stage"},
+  { time: "1:00-3:00 PM", title: "Urban Thump", description: "Feel the rhythm of the street.", image: "/event-poster.png", venue:" Main Stage" },
+  { time: "9:00 AM-5:00 PM", title: "Aaghaz", description: "A mesmerizing opening performance." , image: "/event-poster.png", venue: "In front of Krishna hostel"},
+  { time: "11:00 AM-1:00 PM", title: "Alaap", description: "Soulful musical experience.", image: "/event-poster.png", venue:"Auditorium" },
   
 ];
 
 const day1EventsPart2 = [
-  { time: "1:00-3:00 PM", title: "Jashn E Alfaz", description: "Poetry and spoken word magic.", image: "/event-poster.png" },
-  { time: "3:00-4:30 PM", title: "Kaun Banega Bollywood Pati", description: "A fun Bollywood-themed game show." , image: "/event-poster.png"},
-  { time: "11:00-1:00 PM", title: "Singer Performance", description: "Live vocal performance.", image: "/event-poster.png" },
-  { time: "11:00-1:00 PM", title: "Bollywood Masquerade", description: "A grand masquerade ball.", image: "/event-poster.png" },
+  { time: "1:00-3:00 PM", title: "Jashn E Alfaz", description: "Poetry and spoken word magic.", image: "/event-poster.png", venue:"Auditorium" },
+  { time: "3:00-4:30 PM", title: "Kaun Banega Bollywood Pati", description: "A fun Bollywood-themed game show." , image: "/event-poster.png", venue: "Auditorium"},
+  { time: "11:00 AM-1:00 PM", title: "Singer Performance", description: "Live vocal performance.", image: "/event-poster.png",venue:" Main Stage" },
+  { time: "11:00 AM-1:00 PM", title: "Bollywood Masquerade", description: "A grand masquerade ball.", image: "/event-poster.png" },
 ];
 
 const day2Events = [
-  { time: "11:00-1:00 PM", title: "Lilac Dreams", description: "A dreamy stage performance.", image: "/event-poster.png" },
-  { time: "11:00-1:00 PM", title: "Lyrical Showdown / Rap Battle", description: "Rap battles with intense wordplay.", image: "/event-poster.png" },
-  { time: "11:00-1:00 PM", title: "Antra / Group Singing", description: "Soulful melodies from groups.", image: "/event-poster.png" },
-  { time: "1:00-3:00 PM", title: "Rang Manch / Solo Acting", description: "Drama and expressions on stage.", image: "/event-poster.png" },
+  { time: "11:00 AM-1:00 PM", title: "Lilac Dreams", description: "A dreamy stage performance.", image: "/event-poster.png", venue:"Main Stage" },
+  { time: "1:00-3:00 PM", title: "Lyrical Showdown / Rap Battle", description: "Rap battles with intense wordplay.", image: "/event-poster.png", venue:"Main Stage" },
+  { time: "11:00-1:00 PM", title: "Antra / Group Singing", description: "Soulful melodies from groups.", image: "/event-poster.png", venue:"Auditorium" },
+  { time: "1:00-3:00 PM", title: "Rang Manch / Solo Acting", description: "Drama and expressions on stage.", image: "/event-poster.png", venue:"Auditorium" },
   
 ];
 
 const day2EventsPart2 = [
-  { time: "3:00-4:30 PM", title: "Solo Dance Competition", description: "Incredible solo dance performances.", image: "/event-poster.png" },
-  { time: "6:00 PM", title: "Artist Performance", description: "A spectacular artist showcase.", image: "/event-poster.png" },
-  { time: "-- PM", title: "Surprise Event", description: "A surprise entertainment segment.", image: "/event-poster.png" },
+  { time: "3:00-4:30 PM", title: "Taarang / Solo Dance Competition", description: "Incredible solo dance performances.", image: "/event-poster.png", venue:"Auditorium" },
+  { time: "6:00 PM", title: "Artist Performance", description: "A spectacular artist showcase.", image: "/event-poster.png", venue:" Main Stage" },
+  { time: "-- PM", title: "Surprise Event", description: "A surprise entertainment segment.", image: "/event-poster.png", venue:"--" },
 ];
 
 const Itinerary = () => {

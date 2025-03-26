@@ -252,7 +252,7 @@ const HomePage = () => {
                 When and where is the fest taking place?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300 pb-4">
-                The fest will be held on March 28-29, 2025 at the IGDTUW campus. The event will start at 9:00 AM and continue until 9:00 PM on both days.
+                The fest will be held on March 28-29, 2025 at the IGDTUW campus. The event will start at 11:00 AM and continue until 8:30 PM on both days.
               </AccordionContent>
             </AccordionItem>
             
@@ -270,7 +270,7 @@ const HomePage = () => {
                 Is there an entry fee for the fest?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300 pb-4">
-                General entry to the fest is free for all students with a valid college ID and ticket. Some workshops and events may have a nominal fee.
+                General entry to the fest is free for all students with a valid college ID and pass. Entry to the fest is strictly through passes.
               </AccordionContent>
             </AccordionItem>
             
@@ -296,10 +296,10 @@ const HomePage = () => {
             
             <AccordionItem value="item-7" className="border-b border-gray-700">
               <AccordionTrigger className="text-white md:text-xl px-4 py-3 text-md hover:text-yellow-500">
-              How can one stay updated about Taarangana?
+              How can one stay updated about Fest passes?
               </AccordionTrigger>
               <AccordionContent className="text-gray-300 pb-4">
-              Updates are regularly posted on Taarangana's official social media channels.
+              The schedule release of passes will be posted in the website soon.
               </AccordionContent>
             </AccordionItem>
           </Accordion>

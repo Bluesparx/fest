@@ -93,16 +93,39 @@ const Navbar = () => {
           </ul>
         </div>
         
-        {/* Continuous Marquee with Gradient Sides */}
-        <div className="entrystrip relative md:w-[65%] w-[100%] mx-auto overflow-hidden bg-white/40 flex items-center">
-          <div className="absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-black to-transparent z-10"></div>
-          <div className="absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-black to-transparent z-10"></div>
-          <div className="flex animate-marquee text-white whitespace-nowrap w-full">
-            <div className="px-4 py-1">ENTRY TO FEST IS STRICTLY THROUGH PASSES!</div>
-            <div className="px-4 py-1">ENTRY TO FEST IS STRICTLY THROUGH PASSES!</div>
-            <div className="px-4 py-1">ENTRY TO FEST IS STRICTLY THROUGH PASSES!</div>
-          </div>
-        </div>
+        <div className="entrystrip relative md:w-[65%] w-[100%] mx-auto overflow-hidden bg-white/40 flex items-center"
+           style={{
+             WebkitMaskImage: "linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%)",
+             maskImage: "linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%)"
+           }}>
+        <div className="flex animate-marquee text-white whitespace-nowrap w-full">
+          <div className="px-4 py-1 shrink-0">ENTRY TO FEST IS STRICTLY THROUGH PASSES!</div>
+          <div className="px-4 py-1 shrink-0 flex flex-row gap-1">PASSES FOR <p className='text-yellow-300'>DAY 1</p> WILL OPEN ON <p className='text-yellow-300'>27TH MARCH 3PM!</p></div>
+          <div className="px-4 py-1 shrink-0 flex flex-row gap-1">PASSES FOR <p className='text-yellow-300'>DAY 2</p> WILL OPEN ON <p className='text-yellow-300'>28TH MARCH 3PM!</p></div>
+          <div className="px-4 py-1 shrink-0">ENTRY TO FEST IS STRICTLY THROUGH PASSES!</div>
+          <div className="px-4 py-1 shrink-0">ENTRY TO FEST IS STRICTLY THROUGH PASSES!</div>
+         </div>
+      </div>
+          
+      <style>{`
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      
+      .animate-marquee {
+        display: inline-flex;
+        animation: marquee 15s linear infinite;
+      }
+      
+      .animate-marquee:hover {
+        animation-play-state: paused;
+      }`}
+      </style>
       </div>
     </nav>
   );

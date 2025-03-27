@@ -9,12 +9,18 @@ const sponsors = {
     { id: 3, name: "Title comp", logo: "/api/placeholder/140/140", caption: "Title Sponsor" }
   ],
   coSponsors: [
-    { id: 4, name: "Philips", logo: "/sponsors/philips.png", caption: "Sponsor" },
+    { id: 4, name: "Cisco", logo: "/sponsors/cisco.png", caption: "Sponsor" },
     { id: 5, name: "ICICI", logo: "/sponsors/icici.png", caption: "Sponsor" },
-    { id: 6, name: "MuscleBlaze", logo: "/sponsors/mb.png", caption: "Sponsor" },
+    { id: 6, name: "Indian Oil", logo: "/sponsors/indian_oil.png", caption: "Sponsor" },
     { id: 7, name: "Punjab & Sind Bank", logo: "/sponsors/psb.png", caption: "Sponsor"},
-    { id: 8, name: "Slick", logo: "/sponsors/slick.png", caption: "Sponsor"},
-    { id: 9, name: "Top One Percent", logo: "/sponsors/top1.png", caption: "Sponsor"},
+    { id: 8, name: "Easy Diner", logo: "/sponsors/easy_diner.png", caption: "Sponsor"},
+    { id: 10, name: "Smaaash", logo:"/sponsors/Smaaash_Logo.png", caption:"Sponsor"},
+    { id: 11, name: "The Cozy Store", logo:"/sponsors/cozy_store.png", caption:"Sponsor"},
+    { id: 12, name: "Paree", logo:"/sponsors/paree.png", caption:"Sponsor"},
+    { id: 13, name: "Spice Art", logo:"/sponsors/Spice_Art.jpg", caption:"Sponsor"},
+    { id: 14, name: "Toteaa", logo:"/sponsors/toteaa_logo.png", caption:"Sponsor"},
+    { id: 10, name: "Yardley London", logo:"/sponsors/yardley_london.jpg", caption:"Sponsor"},
+    
    ],
   otherSponsors: [
     { id: 13, name: "company", logo: "/api/placeholder/140/140", caption: "Community Partner" },
@@ -27,9 +33,9 @@ const sponsors = {
 };
 
 const SponsorCard = ({ sponsor }) => (
-  <Card className="bg-black/80 border border-yellow-600/40 shadow-md shadow-yellow-600/20 transition-all duration-300">
+  <Card className="bg-black/40 border border-yellow-600/40 shadow-md shadow-yellow-600/20 transition-all duration-300">
     <CardContent className="p-4 flex flex-col items-center">
-      <div className="mb-3 p-2 bg-white/10 rounded-lg flex items-center justify-center w-28 h-28 sm:w-36 sm:h-36">
+      <div className="mb-3 p-2 bg-white rounded-lg flex items-center justify-center w-28 h-28 sm:w-36 sm:h-36">
         <img 
           src={sponsor.logo} 
           alt={`${sponsor.name} logo`} 

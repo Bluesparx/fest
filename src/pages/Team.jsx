@@ -15,7 +15,7 @@ const TeamsPage = () => {
 
   return (
     <>
-      {isMobile ? <MobileTeam /> : <DesktopTeam />}
+      { <DesktopTeam />}
       <Footer />
     </>
   );

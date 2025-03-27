@@ -31,6 +31,7 @@
     "motion": "^12.4.12",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-multi-carousel": "^2.8.5",
     "react-router-dom": "^7.3.0",
     "react-slick": "^0.30.3",
     "react-typed": "^2.0.12",

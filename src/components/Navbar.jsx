@@ -100,7 +100,7 @@ const Navbar = () => {
            }}>
         <div className="flex animate-marquee text-white whitespace-nowrap w-full">
           <div className="px-4 py-1 shrink-0">ENTRY TO FEST IS STRICTLY THROUGH PASSES!</div>
-          <div className="px-4 py-1 shrink-0 flex flex-row gap-1">PASSES FOR <p className='text-yellow-300'>DAY 1</p> WILL OPEN ON <p className='text-yellow-300'>27TH MARCH 3PM!</p></div>
+          <div className="px-4 py-1 shrink-0 flex flex-row gap-1">PASSES FOR <p className='text-yellow-300'>DAY 1 ARE LIVE!</p></div>
           <div className="px-4 py-1 shrink-0 flex flex-row gap-1">PASSES FOR <p className='text-yellow-300'>DAY 2</p> WILL OPEN ON <p className='text-yellow-300'>28TH MARCH 3PM!</p></div>
           <div className="px-4 py-1 shrink-0">ENTRY TO FEST IS STRICTLY THROUGH PASSES!</div>
           <div className="px-4 py-1 shrink-0">ENTRY TO FEST IS STRICTLY THROUGH PASSES!</div>
@@ -119,7 +119,7 @@ const Navbar = () => {
       
       .animate-marquee {
         display: inline-flex;
-        animation: marquee 15s linear infinite;
+        animation: marquee 12s linear infinite;
       }
       
       .animate-marquee:hover {

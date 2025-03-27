@@ -5,7 +5,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import Footer from "@/components/Footer";
 import Gallery from "@/components/ui/gallery";
 import { Vortex } from "@/components/ui/vortex";
-
+import { ArrowRight } from "lucide-react";
 const aboutText =
   "Immerse yourself in a whirlwind of music, dance, art, and innovation as we bring together students from across the country. From thrilling competitions and mesmerizing performances to insightful workshops and celebrity appearances, this fest is packed with excitement! \n Unleash your creativity, showcase your talent, and make unforgettable memories. Join us as we celebrate passion, culture, and innovation like never before!";
 
@@ -65,6 +65,7 @@ const Typewriter = ({ text, speed = 50 }) => {
 };
 
 const HomePage = () => {
+  const [isHovered, setIsHovered] = useState(false);
 
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 840);
 
@@ -91,8 +92,8 @@ const HomePage = () => {
     <div className="relative overflow-hidden">
     {isSmallScreen ? (
               <Vortex className="h-screen">
-                <div className="flex flex-col justify-center items-evenly pt-20">
-                  <div className="ml-4 flex flex-row gap-4 mb-30">
+                <div className="flex flex-col justify-center items-evenly pt-24 mb-4">
+                  <div className="ml-4 flex flex-row gap-4 mb-20">
                      <motion.img
                        src="/caricatures/1.png"
                        className="carousel-item"
@@ -124,6 +125,33 @@ const HomePage = () => {
             alt="Title"
             className="md:w-[40%] w-[80%] h-auto mb-4 mx-auto "
           />
+           <div className="flex justify-center align-center">
+                <a 
+                href="https://www.tickettailor.com/events/igdtuw/1645169" 
+                className="relative flex items-center group"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              >
+                <div className= "bg-yellow-400 rounded-full opacity-75"></div>
+                <button 
+                  className="relative z-10 flex items-center space-x-2 px-3 py-1.5 
+                  bg-yellow-400 text-black font-bold text-sm 
+                  rounded-lg shadow-lg 
+                  transition-all duration-300 
+                  transform hover:-translate-y-1 hover:scale-105
+                  active:scale-95
+                  focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50"
+                >
+                  <span>Get Passes</span>
+                  <ArrowRight 
+                    className={`transition-transform duration-300 ${
+                      isHovered ? 'translate-x-1' : 'translate-x-0'
+                    }`} 
+                    size={18} 
+                  />
+                </button>
+              </a>
+                </div>
         </div>
 
           <div className="absolute bottom-[-60%] w-[80vw] bg-yellow-300 rounded-full opacity-10 blur-xl"></div>
@@ -150,13 +178,39 @@ const HomePage = () => {
         className="relative h-screen w-screen overflow-hidden bg-cover bg-center "
         style={{ backgroundImage: "url('/bg-vortex.png')" }}
       >
-        <div className="flex flex-col justify-center items-center h-[70vh]">
+        <div className="flex flex-col justify-center pt-6 items-center h-[70vh]">
           <img
             src="/edited_logo.png"
             alt="Title"
             className="w-[40%] h-auto mb-4"
           />
-          
+          <div className="flex justify-center align-center">
+                <a 
+                href="https://www.tickettailor.com/events/igdtuw/1645169" 
+                className="relative flex items-center group"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              >
+                <div className= "bg-yellow-400 rounded-full opacity-75"></div>
+                <button 
+                  className="relative z-10 flex items-center space-x-2 px-3 py-1.5 
+                  bg-yellow-400 text-black font-bold text-sm 
+                  rounded-lg shadow-lg 
+                  transition-all duration-300 
+                  transform hover:-translate-y-1 hover:scale-105
+                  active:scale-95
+                  focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50"
+                >
+                  <span>Get Passes</span>
+                  <ArrowRight 
+                    className={`transition-transform duration-300 ${
+                      isHovered ? 'translate-x-1' : 'translate-x-0'
+                    }`} 
+                    size={18} 
+                  />
+                </button>
+              </a>
+                </div>
         </div>
 
         <div className="carousel absolute bottom-2 w-[35vw] left-1/2 transform -translate-x-1/2 flex justify-center items-center">

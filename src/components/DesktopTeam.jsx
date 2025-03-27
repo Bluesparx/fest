@@ -143,7 +143,7 @@ const DesktopTeam = () => {
         </div>
         <div className="relative w-screen z-10 p-4">
           <header className="text-center mt-16">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-imenglish font-semibold mb-4 text-white uppercase">
+            <h1 className="text-3xl mt-40 sm:text-4xl md:text-5xl lg:text-6xl font-imenglish font-semibold mb-4 text-white uppercase">
               Meet the Team
             </h1>
           </header>
